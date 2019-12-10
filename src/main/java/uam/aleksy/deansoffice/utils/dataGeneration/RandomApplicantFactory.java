@@ -31,7 +31,7 @@ public class RandomApplicantFactory {
         applicant.setName(""+applicant.hashCode());
 
         // todo read from spring profile
-        applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 3, 3));
+        applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 6, 8));
 
         return applicant;
 

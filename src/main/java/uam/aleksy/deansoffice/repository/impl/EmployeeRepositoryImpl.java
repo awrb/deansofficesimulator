@@ -1,30 +1,31 @@
 package uam.aleksy.deansoffice.repository.impl;
 
 import org.springframework.stereotype.Repository;
+import uam.aleksy.deansoffice.data.Applicant;
 import uam.aleksy.deansoffice.data.Employee;
 import uam.aleksy.deansoffice.repository.api.EmployeeRepository;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
-    private List<Employee> employees = new ArrayList<>();
+    private static final int NUM_OF_EMPLOYEES = 3;
+    private static final int EMPLOYEE_ENERGY = 9;
 
-    private static final int NUM_OF_EMPLOYEES = 10;
-
-    private static final int EMPLOYEE_ENERGY = 4;
+    private List<Employee> employees;
+    private Map<Employee, Applicant> employeeApplicantMap;
 
     @PostConstruct
     private void createEmployees() {
+        employeeApplicantMap = new HashMap<>();
+        employees = new ArrayList<>();
         IntStream.rangeClosed(1, NUM_OF_EMPLOYEES).forEach(i -> {
             Employee e = new Employee(null);
-            e.setName(e.hashCode()+"");
+            e.setName(e.hashCode() + "");
             employees.add(e);
         });
     }
@@ -58,5 +59,15 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @Override
     public void resetEmployeesEnergy() {
         employees.forEach(employee -> employee.setEnergyLeft(EMPLOYEE_ENERGY));
+    }
+
+    @Override
+    public Applicant getEmployeesApplicant(Employee employee) {
+        return employeeApplicantMap.get(employee);
+    }
+
+    @Override
+    public void assignEmployeeToApplicant(Employee employee, Applicant applicant) {
+        employeeApplicantMap.put(employee, applicant);
     }
 }

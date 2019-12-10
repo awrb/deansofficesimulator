@@ -4,23 +4,17 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
-import uam.aleksy.deansoffice.data.Applicant;
 import uam.aleksy.deansoffice.data.Employee;
-import uam.aleksy.deansoffice.data.Task;
 import uam.aleksy.deansoffice.service.applicant.api.ApplicantManagementService;
 import uam.aleksy.deansoffice.service.employee.api.EmployeeManagementService;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 @Log
 @Service
 public class SimulationRunner implements CommandLineRunner {
-
-    private Map<Employee, Applicant> employeeApplicantMap;
 
     @Autowired
     private OfficeQueue queue;
@@ -34,100 +28,37 @@ public class SimulationRunner implements CommandLineRunner {
 
     @PostConstruct
     private void init() {
-        employeeApplicantMap = new HashMap<>();
-
-        // populate queue with some applicants
+        // populate queue with some applicants so the simulation can run
         queue.addAll(applicantManagementService.getApplicants());
     }
 
     @Override
-    public void run(String ...args) {
-
+    public void run(String... args) {
 
         while (!queue.isEmpty()) {
             log.info("Remaining in queue: " + queue.getQueue().size());
 
-            // continue as long as every employee isn't out of energy
-            List<Employee> employeesThatCanWork = employeeManagementService.getEmployeesWithEnergy();
+            // continue as long as every employee isn't out of energy - that's when the round is over
+            List<Employee> employeesWithEnergy = employeeManagementService.getEmployeesWithEnergy();
 
+            while (!employeesWithEnergy.isEmpty() && !queue.isEmpty()) {
 
-            while (!employeesThatCanWork.isEmpty() && !queue.isEmpty()) {
-
-                employeesThatCanWork.forEach(employee -> {
-
+                employeesWithEnergy.forEach(employee -> {
                     // employee is busy, as in there's an applicant assigned to him - continue working with him
                     if (employee.isBusy()) {
-                        Applicant applicant = employeeApplicantMap.get(employee);
-
-                        List<Task> taskCopy = applicant.getTasks();
-
-                        if (taskCopy.size() > 0) {//
-                            Task task = applicant.getTasks().get(applicant.getTasks().size() - 1);
-                            log.info(employee.getName() + " still helping " + applicant.getName() + ", new task has difficulty " + task.getDifficulty());
-
-                            if (employee.getEnergyLeft() > task.getDifficulty()) {
-                                // work
-                                employee.setEnergyLeft(employee.getEnergyLeft() - task.getDifficulty());
-
-
-                                taskCopy.remove(taskCopy.size() - 1);
-                                applicant.setTasks(taskCopy);
-                            } else {
-                                // employee is too tired, set his energy to 0 anyway
-                                employee.setEnergyLeft(0);
-                                employee.setBusy(false);
-                            }
-                        } else {//
-                            employee.setBusy(false);
-                            employeeApplicantMap.remove(employee);
-
-                            //
-                        }
-
+                        employeeManagementService.continueHelpingApplicant(employee);
                     } else {
-                        // get a new applicant if possible, assign to map
-
-                        Applicant applicant = queue.peek();
-                        if (applicant != null) { // to remove
-                            Task task = applicant.getTasks().get(applicant.getTasks().size() - 1);
-
-                            log.info(employee.getName() + " now helping " + applicant.getName() + " with task of difficulty " + task.getDifficulty());
-
-
-                            if (employee.getEnergyLeft() > task.getDifficulty()) {
-                                // work
-                                queue.remove();
-                                employee.setEnergyLeft(employee.getEnergyLeft() - task.getDifficulty());
-                                employee.setBusy(true);
-                                employeeApplicantMap.put(employee, applicant); // assign employee to applicant
-
-                                List<Task> taskCopy = applicant.getTasks();
-
-                                if (taskCopy.size() > 0) {
-                                    taskCopy.remove(taskCopy.size() - 1);
-                                    applicant.setTasks(taskCopy);
-                                } else {
-                                    employee.setBusy(false);
-                                    employeeApplicantMap.remove(employee);
-                                }
-
-                            } else {
-                                employee.setEnergyLeft(0);
-                            }
-
-                        } // to remove
-
+                        // employee is not busy, get a new person from the queue for him
+                        employeeManagementService.startHelpingNextApplicant(employee);
                     }
                 });
 
-
-                employeesThatCanWork = employeeManagementService.getEmployeesWithEnergy();
+                employeesWithEnergy = employeeManagementService.getEmployeesWithEnergy();
             }
-
-            // the tour is over, reset energies
+            // the round is over, reset energies
             employeeManagementService.resetEmployeesEnergy();
         }
 
-        log.info("queue is empty yay");
+        log.info("Queue is empty");
     }
 }
