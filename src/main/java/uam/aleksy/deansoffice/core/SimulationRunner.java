@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 import uam.aleksy.deansoffice.data.Employee;
+import uam.aleksy.deansoffice.queue.OfficeQueue;
+import uam.aleksy.deansoffice.queue.QueueStateManager;
 import uam.aleksy.deansoffice.service.applicant.api.ApplicantManagementService;
 import uam.aleksy.deansoffice.service.employee.api.EmployeeManagementService;
 

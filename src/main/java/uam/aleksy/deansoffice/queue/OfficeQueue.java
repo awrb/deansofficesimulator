@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.core;
+package uam.aleksy.deansoffice.queue;
 
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.data.Applicant;

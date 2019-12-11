@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.core;
+package uam.aleksy.deansoffice.queue;
 
 public interface QueueStateListener {
 

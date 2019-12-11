@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.core;
+package uam.aleksy.deansoffice.queue;
 
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
