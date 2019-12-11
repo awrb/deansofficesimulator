@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 import uam.aleksy.deansoffice.data.Applicant;
 import uam.aleksy.deansoffice.data.Employee;
 import uam.aleksy.deansoffice.repository.api.EmployeeRepository;
+import uam.aleksy.deansoffice.utils.dataGeneration.RandomEmployeeFactory;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
@@ -22,12 +23,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @PostConstruct
     private void createEmployees() {
         employeeApplicantMap = new HashMap<>();
-        employees = new ArrayList<>();
-        IntStream.rangeClosed(1, NUM_OF_EMPLOYEES).forEach(i -> {
-            Employee e = new Employee(null);
-            e.setName(e.hashCode() + "");
-            employees.add(e);
-        });
+        employees = RandomEmployeeFactory.getRandomEmployees(NUM_OF_EMPLOYEES);
     }
 
     @Override

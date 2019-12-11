@@ -1,7 +1,7 @@
 package uam.aleksy.deansoffice.data;
 
 public enum Activity {
-    TASK,
+    WORK_ON_TASK,
     SMOKE,
     PHONE,
     FOOD

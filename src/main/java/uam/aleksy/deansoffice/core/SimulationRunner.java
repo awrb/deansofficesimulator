@@ -25,6 +25,9 @@ public class SimulationRunner implements CommandLineRunner {
     @Autowired
     private ApplicantManagementService applicantManagementService;
 
+    @Autowired
+    private QueueStateManager queueStateManager;
+
 
     @PostConstruct
     private void init() {
@@ -55,8 +58,8 @@ public class SimulationRunner implements CommandLineRunner {
 
                 employeesWithEnergy = employeeManagementService.getEmployeesWithEnergy();
             }
-            // the round is over, reset energies
-            employeeManagementService.resetEmployeesEnergy();
+            // the round is over
+            queueStateManager.notifyNextRound();
         }
 
         log.info("Queue is empty");

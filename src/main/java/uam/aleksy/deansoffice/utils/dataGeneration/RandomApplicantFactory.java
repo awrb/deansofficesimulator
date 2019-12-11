@@ -1,10 +1,17 @@
 package uam.aleksy.deansoffice.utils.dataGeneration;
 
+import com.github.javafaker.Faker;
 import uam.aleksy.deansoffice.data.*;
 
 import java.util.Random;
 
 public class RandomApplicantFactory {
+
+    private static Faker faker;
+
+    static {
+        faker = new Faker();
+    }
 
     public static Applicant getRandomApplicant() {
 
@@ -28,7 +35,7 @@ public class RandomApplicantFactory {
             applicant = new Dean();
         }
 
-        applicant.setName(""+applicant.hashCode());
+        applicant.setName(faker.name().firstName());
 
         // todo read from spring profile
         applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 6, 8));

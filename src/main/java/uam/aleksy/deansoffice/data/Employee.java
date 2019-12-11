@@ -1,25 +1,37 @@
 package uam.aleksy.deansoffice.data;
 
 
-import org.springframework.stereotype.Component;
-
-
 import java.util.List;
 
 /**
  * Pracownik dziekanatu
  */
 
-@Component
 public class Employee {
 
+    private String name;
     private boolean busy;
-    private List<Activity> activityCycle; // task, soup, task, task.. //ORDERED
+    private List<Activity> activityCycle;
+    private int currentActivityIndex;
     private int energyLeft;
-    String name;
 
-    public void setActivityCycle(List<Activity> activityCycle) {
+    public int getCurrentActivityIndex() {
+        return currentActivityIndex;
+    }
+
+    public void setCurrentActivityIndex(int currentActivityIndex) {
+        this.currentActivityIndex = currentActivityIndex;
+    }
+
+    public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, String name) {
+        this.busy = busy;
         this.activityCycle = activityCycle;
+        this.energyLeft = energyLeft;
+        this.name = name;
+        this.currentActivityIndex = 0;
+    }
+
+    public Employee() {
     }
 
     public String getName() {
@@ -38,13 +50,6 @@ public class Employee {
         this.energyLeft = energyLeft;
     }
 
-    public Employee() {
-    }
-
-    public Employee(List<Activity> activityCycle) {
-        this.activityCycle = activityCycle;
-    }
-
     public boolean isBusy() {
         return busy;
     }
@@ -55,5 +60,9 @@ public class Employee {
 
     public List<Activity> getActivityCycle() {
         return activityCycle;
+    }
+
+    public void setActivityCycle(List<Activity> activityCycle) {
+        this.activityCycle = activityCycle;
     }
 }

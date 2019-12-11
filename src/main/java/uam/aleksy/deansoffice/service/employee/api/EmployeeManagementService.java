@@ -20,17 +20,16 @@ public interface EmployeeManagementService {
 
     void finishWork(Employee employee);
 
-    void finishHelping(Employee employee);
-
     void workOnTask(Employee employee, Task task);
 
     boolean employeeCanPerformTask(Employee employee, Task task);
 
-    Applicant getEmployeesApplicant(Employee employee);
+    boolean isEmployeeWorking(Employee employee);
 
-    void assignApplicantToEmployee(Applicant applicant, Employee employee);
+    Applicant getEmployeesApplicant(Employee employee);
 
     void continueHelpingApplicant(Employee employee);
 
     void startHelpingNextApplicant(Employee employee);
+
 }
