@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.queue;
+package uam.aleksy.deansoffice.core;
 
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
@@ -9,9 +9,9 @@ import java.util.List;
 
 @Service
 @Log
-public class QueueStateManager {
+public class SimulationStateManager {
 
-    private List<QueueStateListener> listeners;
+    private List<SimulationStateListener> listeners;
 
     @PostConstruct
     private void init() {
@@ -23,7 +23,12 @@ public class QueueStateManager {
         listeners.forEach(listener -> listener.nextRound());
     }
 
-    public void registerListener(QueueStateListener listener) {
+    public void notifyStart() {
+        log.info("Queue simulation starting");
+        listeners.forEach(listeners -> listeners.onStart());
+    }
+
+    public void registerListener(SimulationStateListener listener) {
         listeners.add(listener);
     }
 }

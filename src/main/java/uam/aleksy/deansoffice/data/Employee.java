@@ -28,7 +28,6 @@ public class Employee {
         this.activityCycle = activityCycle;
         this.energyLeft = energyLeft;
         this.name = name;
-        this.currentActivityIndex = 0;
     }
 
     public Employee() {

@@ -3,13 +3,13 @@ package uam.aleksy.deansoffice.service.employee.impl;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uam.aleksy.deansoffice.queue.OfficeQueue;
-import uam.aleksy.deansoffice.queue.QueueStateListener;
-import uam.aleksy.deansoffice.queue.QueueStateManager;
 import uam.aleksy.deansoffice.data.Activity;
 import uam.aleksy.deansoffice.data.Applicant;
 import uam.aleksy.deansoffice.data.Employee;
 import uam.aleksy.deansoffice.data.Task;
+import uam.aleksy.deansoffice.queue.OfficeQueue;
+import uam.aleksy.deansoffice.core.SimulationStateListener;
+import uam.aleksy.deansoffice.core.SimulationStateManager;
 import uam.aleksy.deansoffice.repository.api.EmployeeRepository;
 import uam.aleksy.deansoffice.service.applicant.api.ApplicantManagementService;
 import uam.aleksy.deansoffice.service.employee.api.EmployeeManagementService;
@@ -20,7 +20,7 @@ import java.util.Optional;
 
 @Log
 @Service
-public class EmployeeManagementServiceImpl implements EmployeeManagementService, QueueStateListener {
+public class EmployeeManagementServiceImpl implements EmployeeManagementService, SimulationStateListener {
 
     private static int FIRST_ACTIVITY_INDEX = 0;
 
@@ -34,11 +34,11 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService,
     private EmployeeRepository repository;
 
     @Autowired
-    private QueueStateManager queueStateManager;
+    private SimulationStateManager simulationStateManager;
 
     @PostConstruct
     private void init() {
-        queueStateManager.registerListener(this);
+        simulationStateManager.registerListener(this);
     }
 
     @Override

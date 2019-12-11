@@ -6,7 +6,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 import uam.aleksy.deansoffice.data.Employee;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
-import uam.aleksy.deansoffice.queue.QueueStateManager;
 import uam.aleksy.deansoffice.service.applicant.api.ApplicantManagementService;
 import uam.aleksy.deansoffice.service.employee.api.EmployeeManagementService;
 
@@ -28,7 +27,7 @@ public class SimulationRunner implements CommandLineRunner {
     private ApplicantManagementService applicantManagementService;
 
     @Autowired
-    private QueueStateManager queueStateManager;
+    private SimulationStateManager simulationStateManager;
 
 
     @PostConstruct
@@ -39,6 +38,8 @@ public class SimulationRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+
+        simulationStateManager.notifyStart();
 
         while (!queue.isEmpty()) {
             log.info("Remaining in queue: " + queue.getQueue().size());
@@ -61,7 +62,7 @@ public class SimulationRunner implements CommandLineRunner {
                 employeesWithEnergy = employeeManagementService.getEmployeesWithEnergy();
             }
             // the round is over
-            queueStateManager.notifyNextRound();
+            simulationStateManager.notifyNextRound();
         }
 
         log.info("Queue is empty");
