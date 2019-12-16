@@ -4,20 +4,20 @@ import uam.aleksy.deansoffice.data.Applicant;
 import uam.aleksy.deansoffice.data.Employee;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.function.Predicate;
 
 public interface EmployeeRepository {
-    List<Employee> getEmployees();
 
-    List<Employee> getEmployeesWithEnergy();
-
-    List<Employee> getBusyEmployees();
-
-    Optional<Employee> findFreeEmployee();
+    List<Employee> getEmployees(Predicate<Employee> predicate);
 
     Applicant getEmployeesApplicant(Employee employee);
 
+    Employee getApplicantsEmployee(Applicant applicant);
+
     void assignEmployeeToApplicant(Employee employee, Applicant applicant);
 
-    void resetEmployeesEnergy();
+    void freeEmployee(Employee employee);
+
+    void removeEmployee(Employee employee);
+
 }

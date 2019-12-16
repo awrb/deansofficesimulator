@@ -14,6 +14,18 @@ public class Employee {
     private List<Activity> activityCycle;
     private int currentActivityIndex;
     private int energyLeft;
+    private int initialEnergy;
+
+    public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, int initialEnergy, String name) {
+        this.busy = busy;
+        this.activityCycle = activityCycle;
+        this.energyLeft = energyLeft;
+        this.initialEnergy = initialEnergy;
+        this.name = name;
+    }
+
+    public Employee() {
+    }
 
     public int getCurrentActivityIndex() {
         return currentActivityIndex;
@@ -21,16 +33,6 @@ public class Employee {
 
     public void setCurrentActivityIndex(int currentActivityIndex) {
         this.currentActivityIndex = currentActivityIndex;
-    }
-
-    public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, String name) {
-        this.busy = busy;
-        this.activityCycle = activityCycle;
-        this.energyLeft = energyLeft;
-        this.name = name;
-    }
-
-    public Employee() {
     }
 
     public String getName() {
@@ -63,5 +65,27 @@ public class Employee {
 
     public void setActivityCycle(List<Activity> activityCycle) {
         this.activityCycle = activityCycle;
+    }
+
+    public void finishWork() {
+        energyLeft = 0;
+        busy = false;
+    }
+
+    public void workOnTask(Task task) {
+        busy = true;
+        energyLeft -= task.getDifficulty();
+    }
+
+    public boolean canWorkOnTask(Task task) {
+        return task.getDifficulty() <= energyLeft;
+    }
+
+    public void resetEnergy() {
+        energyLeft = initialEnergy;
+    }
+
+    public boolean isWorking() {
+        return activityCycle.get(currentActivityIndex).equals(Activity.WORK_ON_TASK);
     }
 }

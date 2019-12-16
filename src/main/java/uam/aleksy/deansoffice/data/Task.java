@@ -6,6 +6,8 @@ public class Task {
 
     private Applicant applicant;
 
+    // TODO czas w rundach
+
     public Task(int difficulty) {
         this.difficulty = difficulty;
     }

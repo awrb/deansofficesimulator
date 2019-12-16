@@ -41,4 +41,11 @@ public class OfficeQueue {
     public Applicant peek() {
         return queue.peek();
     }
+
+    public void flush() {
+        while (queue.peek() != null) {
+            queue.remove();
+        }
+    }
 }
+

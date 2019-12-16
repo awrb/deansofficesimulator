@@ -23,7 +23,7 @@ public class RandomEmployeeFactory {
     }
 
     public static Employee getRandomEmployee() {
-        return new Employee(false, getRandomActivityCycle(), 0, faker.name().firstName());
+        return new Employee(false, getRandomActivityCycle(), 10, 10, faker.name().firstName());
     }
 
     public static List<Employee> getRandomEmployees(int amount) {
@@ -43,13 +43,14 @@ public class RandomEmployeeFactory {
 
         List<Activity> randomOrderActivities = new ArrayList<>();
 
+        randomOrderActivities.add(Activity.WORK_ON_TASK);
+
         IntStream.rangeClosed(1, activitiesSize).forEach(i -> {
             int index = random.nextInt(activitiesSize);
             randomOrderActivities.add(activities[index]);
         });
 
         // TODO make sure there's at least one work
-
         return randomOrderActivities;
 
 

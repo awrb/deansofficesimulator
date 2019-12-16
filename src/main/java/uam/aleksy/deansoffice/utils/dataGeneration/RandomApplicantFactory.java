@@ -37,7 +37,7 @@ public class RandomApplicantFactory {
 
         applicant.setName(faker.name().firstName());
 
-        // todo read from spring profile
+        // todo read from properies
         applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 6, 8));
 
         return applicant;

@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 @Log
-public class SimulationStateManager {
+public class SimulationStatePublisher {
 
     private List<SimulationStateListener> listeners;
 
@@ -18,14 +18,14 @@ public class SimulationStateManager {
         listeners = new ArrayList<>();
     }
 
-    public void notifyNextRound() {
-        log.info("New round starting");
-        listeners.forEach(listener -> listener.nextRound());
+    public void notifyNextTour() {
+        log.info("New tour starting");
+        listeners.forEach(SimulationStateListener::nextTour);
     }
 
     public void notifyStart() {
         log.info("Queue simulation starting");
-        listeners.forEach(listeners -> listeners.onStart());
+        listeners.forEach(SimulationStateListener::onStart);
     }
 
     public void registerListener(SimulationStateListener listener) {
