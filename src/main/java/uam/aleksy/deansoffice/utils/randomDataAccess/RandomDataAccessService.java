@@ -2,8 +2,8 @@ package uam.aleksy.deansoffice.utils.randomDataAccess;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uam.aleksy.deansoffice.data.Student;
-import uam.aleksy.deansoffice.repository.api.ApplicantRepository;
+import uam.aleksy.deansoffice.applicant.ApplicantRepository;
+import uam.aleksy.deansoffice.applicant.data.Student;
 
 import java.util.Optional;
 

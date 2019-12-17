@@ -1,7 +1,7 @@
 package uam.aleksy.deansoffice.queue;
 
 import org.springframework.stereotype.Component;
-import uam.aleksy.deansoffice.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Applicant;
 
 import javax.annotation.PostConstruct;
 import java.util.LinkedList;

@@ -1,8 +1,8 @@
 package uam.aleksy.deansoffice.utils.dataGeneration;
 
 import com.github.javafaker.Faker;
-import uam.aleksy.deansoffice.data.Activity;
-import uam.aleksy.deansoffice.data.Employee;
+import uam.aleksy.deansoffice.employee.enums.Activity;
+import uam.aleksy.deansoffice.employee.data.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class RandomEmployeeFactory {
     }
 
     public static Employee getRandomEmployee() {
-        return new Employee(false, getRandomActivityCycle(), 10, 10, faker.name().firstName());
+        return new Employee(false, getRandomActivityCycle(), 6, 6, faker.name().firstName());
     }
 
     public static List<Employee> getRandomEmployees(int amount) {

@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.utils;
 
-import uam.aleksy.deansoffice.data.*;
+import uam.aleksy.deansoffice.applicant.data.*;
+import uam.aleksy.deansoffice.employee.enums.Opinion;
 
 import java.util.HashMap;
 import java.util.Map;
