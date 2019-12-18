@@ -42,7 +42,7 @@ public class WorkCoordinationService {
 
     public void continueHelping(Employee employee, Applicant applicant, Task task) {
         workOnNewTask(employee, applicant, task);
-        log.info(employee.getName() + " now helping " + applicant.getName() + " with task of difficulty "
+        log.info(employee.getName() + " now helping " + applicant.getClass().getSimpleName() + " " + applicant.getName() + " with task of difficulty "
                 + task.getDifficulty());
 
     }

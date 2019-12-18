@@ -11,11 +11,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Repository
 @Log
+@Repository
 public class TourRepository {
 
-    private final Long FIRST_ID = 0L;
+    private static final Long FIRST_ID = 0L;
 
     private AtomicLong tourIdGenerator;
 

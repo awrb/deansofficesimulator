@@ -2,11 +2,14 @@ package uam.aleksy.deansoffice.tour.consequences;
 
 import uam.aleksy.deansoffice.applicant.data.*;
 import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
+import uam.aleksy.deansoffice.tour.consequences.data.ConsequenceContext;
 import uam.aleksy.deansoffice.tour.consequences.enums.ConsequenceType;
+
+import java.util.Optional;
 
 public class ConsequencesFactory {
 
-    public static Consequence createConsequence(Applicant applicant) {
+    public static Consequence createConsequence(Applicant applicant, ConsequenceContext consequenceContext) {
 
         Class<? extends Applicant> clazz = applicant.getClass();
 
@@ -24,9 +27,20 @@ public class ConsequencesFactory {
             consequence.setConsequenceType(ConsequenceType.EXTRA_TASKS);
             consequence.setConsequenceValue(((Adjunct) applicant).getExtraTasks());
         } else if (clazz.equals(DoctoralStudent.class)) {
+
+            if (consequenceContext == null) {
+                // no student was punished, there was no consequence
+                return null;
+            }
+
             consequence.setConsequenceType(ConsequenceType.PUNISH_STUDENT);
-            consequence.setConsequenceValue("PLACEHOLDER");
-        } else if (clazz.equals(Acquaintance.class)){
+
+            Optional<Student> optionalStudent = consequenceContext.getPunishedStudent();
+
+            String consequenceValue = optionalStudent.isPresent() ? optionalStudent.get().getName() : "NO STUDENT TO PUNISH";
+            consequence.setConsequenceValue(consequenceValue);
+
+        } else if (clazz.equals(Acquaintance.class)) {
             consequence.setConsequenceType(ConsequenceType.COMPLAIN);
             consequence.setConsequenceValue(((Acquaintance) applicant).getMinutesComplained());
         } else { // TODO DEAN

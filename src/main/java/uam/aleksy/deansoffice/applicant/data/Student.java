@@ -3,23 +3,20 @@ package uam.aleksy.deansoffice.applicant.data;
 public class Student extends Applicant {
 
     private static final int PRIORITY = 1;
-
-    public Student() {}
-
+    private boolean bringsFlowers;
+    private boolean bringsChocolates;
+    private int beersToDrink;
+    private float markPunishment;
+    public Student() {
+    }
     public Student(boolean bringsFlowers, boolean bringsChocolates) {
         this.bringsFlowers = bringsFlowers;
         this.bringsChocolates = bringsChocolates;
     }
 
-    private boolean bringsFlowers;
-    private boolean bringsChocolates;
-    private int beersToDrink;
-    private float markPunishment;
-
-    public void setBringsFlowers(boolean bringsFlowers) {
-        this.bringsFlowers = bringsFlowers;
+    public float getMarkPunishment() {
+        return markPunishment;
     }
-
 
     public void incrementMarkPunishment() {
         markPunishment += 0.5f;
@@ -27,10 +24,6 @@ public class Student extends Applicant {
 
     public void incrementBeersToDrink() {
         beersToDrink += 1;
-    }
-
-    public void setBringsChocolates(boolean bringsChocolates) {
-        this.bringsChocolates = bringsChocolates;
     }
 
     public int getBeersToDrink() {
@@ -45,8 +38,16 @@ public class Student extends Applicant {
         return bringsFlowers;
     }
 
+    public void setBringsFlowers(boolean bringsFlowers) {
+        this.bringsFlowers = bringsFlowers;
+    }
+
     public boolean isBringsChocolates() {
         return bringsChocolates;
+    }
+
+    public void setBringsChocolates(boolean bringsChocolates) {
+        this.bringsChocolates = bringsChocolates;
     }
 
     public int getPriority() {

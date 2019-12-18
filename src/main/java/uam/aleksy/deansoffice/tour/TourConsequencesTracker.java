@@ -8,6 +8,7 @@ import uam.aleksy.deansoffice.tour.consequences.ConsequenceLogger;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceRepository;
 import uam.aleksy.deansoffice.tour.consequences.ConsequencesFactory;
 import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
+import uam.aleksy.deansoffice.tour.consequences.data.ConsequenceContext;
 import uam.aleksy.deansoffice.tour.data.Tour;
 import uam.aleksy.deansoffice.tour.summary.TourSummaryManager;
 import uam.aleksy.deansoffice.utils.randomDataAccess.RandomDataAccessService;
@@ -63,10 +64,14 @@ public class TourConsequencesTracker implements NextTourListener {
 
         applicants.forEach(applicant -> {
             applicant.incrementRoundsWaited();
-            applyConsequencesForApplicant(applicant);
-            Consequence consequence = ConsequencesFactory.createConsequence(applicant);
-            consequencesOfTour.add(consequence);
-            ConsequenceLogger.reportConsequence(consequence);
+            ConsequenceContext consequenceContext = applyConsequencesForApplicant(applicant);
+            Consequence consequence = ConsequencesFactory.createConsequence(applicant, consequenceContext);
+
+            // due to circumstances, consequence was null...
+            if (consequence != null) {
+                consequencesOfTour.add(consequence);
+                ConsequenceLogger.reportConsequence(consequence);
+            }
         });
 
         consequenceRepository.add(tour, consequencesOfTour);
@@ -77,8 +82,10 @@ public class TourConsequencesTracker implements NextTourListener {
 
     }
 
-    private void applyConsequencesForApplicant(Applicant applicant) {
+    private ConsequenceContext applyConsequencesForApplicant(Applicant applicant) {
         Class<? extends Applicant> applicantClazz = applicant.getClass();
+
+        ConsequenceContext consequenceContext = null;
 
         int roundsWaited = applicant.getRoundsWaited();
 
@@ -89,11 +96,11 @@ public class TourConsequencesTracker implements NextTourListener {
                 ((Student) applicant).incrementBeersToDrink();
             }
 //      } TODO LOGIC
-//        } else if (applicantClazz.equals(Dean.class)) {
-//            if (roundsWaited == 4) {
+        } else if (applicantClazz.equals(Dean.class)) {
+            if (roundsWaited == 4) {
 //                Employee employeeToFire = employeeRepository.getApplicantsEmployee(applicant);
 //                employeeManagementService.fireEmployee(employeeToFire);
-//            }
+            }
         } else if (applicantClazz.equals(Professor.class)) {
             ((Professor) applicant).incrementDifferentialDegree();
         } else if (applicantClazz.equals(Adjunct.class)) {
@@ -103,9 +110,13 @@ public class TourConsequencesTracker implements NextTourListener {
         } else {
             // last case - DoctoralStudent punishes a random student
             if (everyTwoRounds.test(roundsWaited)) {
+                consequenceContext = new ConsequenceContext();
                 Optional<Student> optionalStudent = randomDataAccessService.getRandomStudent();
                 optionalStudent.ifPresent(Student::incrementMarkPunishment);
+                consequenceContext.setPunishedStudent(optionalStudent);
             }
         }
+
+        return consequenceContext;
     }
 }
