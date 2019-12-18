@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.tour.NextTourListener;
@@ -9,16 +10,15 @@ import uam.aleksy.deansoffice.tour.data.Tour;
 
 import javax.annotation.PostConstruct;
 
-@Service
-public class EmployeeManagementService implements NextTourListener {
-
+@Component
+public class EmployeeManager implements NextTourListener {
 
     private EmployeeRepository employeeRepository;
 
     private NextTourPublisher nextTourPublisher;
 
     @Autowired
-    public EmployeeManagementService(EmployeeRepository employeeRepository, NextTourPublisher nextTourPublisher) {
+    public EmployeeManager(EmployeeRepository employeeRepository, NextTourPublisher nextTourPublisher) {
         this.employeeRepository = employeeRepository;
         this.nextTourPublisher = nextTourPublisher;
     }
@@ -26,10 +26,6 @@ public class EmployeeManagementService implements NextTourListener {
     @PostConstruct
     private void init() {
         nextTourPublisher.registerListener(this);
-    }
-
-    public void fireEmployee(Employee employee) {
-        employeeRepository.removeEmployee(employee);
     }
 
     @Override

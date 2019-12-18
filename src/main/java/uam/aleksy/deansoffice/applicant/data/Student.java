@@ -7,8 +7,10 @@ public class Student extends Applicant {
     private boolean bringsChocolates;
     private int beersToDrink;
     private float markPunishment;
+
     public Student() {
     }
+
     public Student(boolean bringsFlowers, boolean bringsChocolates) {
         this.bringsFlowers = bringsFlowers;
         this.bringsChocolates = bringsChocolates;

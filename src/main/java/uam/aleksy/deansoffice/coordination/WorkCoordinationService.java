@@ -13,22 +13,20 @@ import uam.aleksy.deansoffice.queue.OfficeQueue;
 @Service
 public class WorkCoordinationService {
 
-
     private OfficeQueue officeQueue;
 
     private EmployeeRepository employeeRepository;
 
     @Autowired
-    public WorkCoordinationService(EmployeeRepository employeeRepository,
-                                   OfficeQueue queue) {
+    public WorkCoordinationService(EmployeeRepository employeeRepository, OfficeQueue queue) {
         this.employeeRepository = employeeRepository;
         this.officeQueue = queue;
     }
 
     public void continueHelping(Employee employee, Applicant applicant, Task task) {
         workOnNewTask(employee, applicant, task);
-        log.info(employee.getName() + " now helping " + applicant.getClass().getSimpleName() + " " + applicant.getName() + " with task of difficulty "
-                + task.getDifficulty());
+        log.info(employee.getName() + " now helping " + applicant.getClass().getSimpleName() + " " + applicant.getName()
+                + " with task of difficulty " + task.getDifficulty());
 
     }
 
@@ -38,7 +36,7 @@ public class WorkCoordinationService {
     }
 
     public void finishHelping(Employee employee, Applicant applicant) {
-        employeeRepository.freeEmployee(employee);
+        employeeRepository.removeEmployee(employee);
         employee.setBusy(false);
         log.info(employee.getName() + " finished helping " + applicant.getName());
     }

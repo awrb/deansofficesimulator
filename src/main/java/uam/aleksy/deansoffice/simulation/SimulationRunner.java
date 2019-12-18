@@ -83,7 +83,7 @@ public class SimulationRunner implements CommandLineRunner {
 
         Predicate<Employee> energyLeftPredicate = employee -> employee.getEnergyLeft() > 0;
 
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty() && !employeeRepository.getEmployees(employee -> true).isEmpty()) {
             log.info("Remaining in queue: " + queue.getQueue().size());
             Set<Applicant> applicantsInTour = new HashSet<>();
 

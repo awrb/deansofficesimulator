@@ -4,6 +4,8 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.*;
+import uam.aleksy.deansoffice.employee.EmployeeRepository;
+import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceLogger;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceRepository;
 import uam.aleksy.deansoffice.tour.consequences.ConsequencesFactory;
@@ -34,18 +36,22 @@ public class TourConsequencesTracker implements NextTourListener {
 
     private TourSummaryManager tourSummaryManager;
 
+    private EmployeeRepository employeeRepository;
+
 
     @Autowired
     public TourConsequencesTracker(TourRepository tourRepository,
                                    RandomDataAccessService randomDataAccessService,
                                    ConsequenceRepository consequenceRepository,
                                    NextTourPublisher publisher,
-                                   TourSummaryManager tourSummaryManager) {
+                                   TourSummaryManager tourSummaryManager,
+                                   EmployeeRepository employeeRepository) {
         this.tourRepository = tourRepository;
         this.randomDataAccessService = randomDataAccessService;
         this.consequenceRepository = consequenceRepository;
         this.publisher = publisher;
         this.tourSummaryManager = tourSummaryManager;
+        this.employeeRepository = employeeRepository;
     }
 
 
@@ -95,11 +101,11 @@ public class TourConsequencesTracker implements NextTourListener {
             if (everyTwoRounds.test(roundsWaited)) {
                 ((Student) applicant).incrementBeersToDrink();
             }
-//      } TODO LOGIC
         } else if (applicantClazz.equals(Dean.class)) {
-            if (roundsWaited == 4) {
-//                Employee employeeToFire = employeeRepository.getApplicantsEmployee(applicant);
-//                employeeManagementService.fireEmployee(employeeToFire);
+            // TODO poprawa logiki i magic number
+            if (roundsWaited > 0) {
+                // in other words, fire him
+                employeeRepository.removeEmployeeByApplicant(applicant);
             }
         } else if (applicantClazz.equals(Professor.class)) {
             ((Professor) applicant).incrementDifferentialDegree();

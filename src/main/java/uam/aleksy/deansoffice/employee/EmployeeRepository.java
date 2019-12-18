@@ -2,6 +2,7 @@ package uam.aleksy.deansoffice.employee;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Repository;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.data.Employee;
@@ -13,6 +14,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @Repository
+@Log
 public class EmployeeRepository {
 
     private static final int NUM_OF_EMPLOYEES = 3;
@@ -38,12 +40,15 @@ public class EmployeeRepository {
         employeeApplicantBiMap.put(employee, applicant);
     }
 
-    public void freeEmployee(Employee employee) {
+    public void removeEmployee(Employee employee) {
         employeeApplicantBiMap.remove(employee);
     }
 
-    public void removeEmployee(Employee employee) {
+    public void removeEmployeeByApplicant(Applicant applicant) {
+        log.info("Removing employee helping " + applicant.getName());
+        Employee employee = employeeApplicantBiMap.inverse().get(applicant);
         employeeApplicantBiMap.remove(employee);
+        employees.remove(employee);
     }
 
     public Employee getApplicantsEmployee(Applicant applicant) {

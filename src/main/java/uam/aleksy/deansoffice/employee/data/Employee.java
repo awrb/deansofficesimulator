@@ -30,6 +30,25 @@ public class Employee {
     public Employee() {
     }
 
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!obj.getClass().equals(this.getClass())) {
+            return false;
+        }
+
+        return this.name.equals(((Employee) obj).name);
+
+    }
+
     public int getCurrentActivityIndex() {
         return currentActivityIndex;
     }
