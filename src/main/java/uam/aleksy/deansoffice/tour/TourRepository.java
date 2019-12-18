@@ -7,7 +7,6 @@ import uam.aleksy.deansoffice.tour.data.Tour;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
@@ -25,16 +24,20 @@ public class TourRepository {
      */
     private Map<Tour, Set<Applicant>> tourApplicantsMap;
 
+
     @PostConstruct
     private void init() {
         tourIdGenerator = new AtomicLong(FIRST_ID);
         tourApplicantsMap = new HashMap<>();
     }
 
-    public void addNewTour(Set<Applicant> applicantList) {
+    public Tour addNewTour(Set<Applicant> applicantList) {
         Tour tour = new Tour(tourIdGenerator.incrementAndGet());
+
         log.info("Tour number " + tour.getId() + " starting");
+
         tourApplicantsMap.put(tour, applicantList);
+        return tour;
     }
 
     public Map<Tour, Set<Applicant>> getTourApplicantsMap() {

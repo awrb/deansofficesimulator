@@ -99,4 +99,8 @@ public class Employee {
 
         currentActivityIndex += 1;
     }
+
+    public Activity getCurrentActivity() {
+        return activityCycle.get(currentActivityIndex);
+    }
 }

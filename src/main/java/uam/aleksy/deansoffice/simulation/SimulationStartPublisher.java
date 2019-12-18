@@ -11,7 +11,7 @@ import java.util.List;
 @Log
 public class SimulationStartPublisher {
 
-    private List<SimulationStateListener> listeners;
+    private List<SimulationStartListener> listeners;
 
     @PostConstruct
     private void init() {
@@ -20,10 +20,10 @@ public class SimulationStartPublisher {
 
     public void notifyStart() {
         log.info("Queue simulation starting");
-        listeners.forEach(SimulationStateListener::onStart);
+        listeners.forEach(SimulationStartListener::onStart);
     }
 
-    public void registerListener(SimulationStateListener listener) {
+    public void registerListener(SimulationStartListener listener) {
         listeners.add(listener);
     }
 }

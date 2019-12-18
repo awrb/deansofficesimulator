@@ -1,6 +1,6 @@
-package uam.aleksy.deansoffice.tour.data;
+package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.tour.enums.ConsequenceType;
+import uam.aleksy.deansoffice.tour.consequences.enums.ConsequenceType;
 
 public class Consequence {
 

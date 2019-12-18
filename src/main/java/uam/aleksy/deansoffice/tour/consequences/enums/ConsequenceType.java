@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.tour.enums;
+package uam.aleksy.deansoffice.tour.consequences.enums;
 
 public enum ConsequenceType {
     BEER("beers to drink"),

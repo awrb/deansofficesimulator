@@ -1,13 +1,13 @@
-package uam.aleksy.deansoffice.tour;
+package uam.aleksy.deansoffice.tour.consequences;
 
 import lombok.extern.java.Log;
-import uam.aleksy.deansoffice.tour.data.Consequence;
+import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
 
 @Log
-class ConsequenceLogger {
+public class ConsequenceLogger {
 
 
-    static void reportConsequence(Consequence consequence) {
+    public static void reportConsequence(Consequence consequence) {
         log.info(consequence.getApplicantName() + " "
                 + consequence.getConsequenceType().getValue() + " "
                 + consequence.getConsequenceValue()

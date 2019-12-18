@@ -1,12 +1,12 @@
-package uam.aleksy.deansoffice.tour;
+package uam.aleksy.deansoffice.tour.consequences;
 
 import uam.aleksy.deansoffice.applicant.data.*;
-import uam.aleksy.deansoffice.tour.data.Consequence;
-import uam.aleksy.deansoffice.tour.enums.ConsequenceType;
+import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
+import uam.aleksy.deansoffice.tour.consequences.enums.ConsequenceType;
 
-class ConsequencesFactory {
+public class ConsequencesFactory {
 
-    static Consequence createConsequence(Applicant applicant) {
+    public static Consequence createConsequence(Applicant applicant) {
 
         Class<? extends Applicant> clazz = applicant.getClass();
 

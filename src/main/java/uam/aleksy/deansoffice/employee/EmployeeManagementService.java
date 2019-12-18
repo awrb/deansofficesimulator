@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.tour.NextTourListener;
 import uam.aleksy.deansoffice.tour.NextTourPublisher;
+import uam.aleksy.deansoffice.tour.data.Tour;
 
 import javax.annotation.PostConstruct;
-import java.util.function.Predicate;
 
 @Service
 public class EmployeeManagementService implements NextTourListener {
@@ -33,7 +33,7 @@ public class EmployeeManagementService implements NextTourListener {
     }
 
     @Override
-    public void nextTour() {
+    public void nextTour(Tour tour) {
         employeeRepository.getEmployees(employee -> true).forEach(employee -> {
             employee.toggleNextActivity();
             employee.resetEnergy();

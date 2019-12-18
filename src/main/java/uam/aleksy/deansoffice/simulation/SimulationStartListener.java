@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.simulation;
 
-public interface SimulationStateListener {
+public interface SimulationStartListener {
 
     void onStart();
 }

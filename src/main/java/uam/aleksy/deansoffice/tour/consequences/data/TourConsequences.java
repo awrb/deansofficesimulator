@@ -1,4 +1,4 @@
-package uam.aleksy.deansoffice.tour.data;
+package uam.aleksy.deansoffice.tour.consequences.data;
 
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.enums.Activity;

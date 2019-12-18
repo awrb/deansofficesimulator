@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.tour;
 
 import org.springframework.stereotype.Service;
+import uam.aleksy.deansoffice.tour.data.Tour;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -16,8 +17,8 @@ public class NextTourPublisher {
         listeners = new ArrayList<>();
     }
 
-    public void notifyNextTour() {
-        listeners.forEach(NextTourListener::nextTour);
+    public void notifyNextTour(Tour tour) {
+        listeners.forEach(listener -> listener.nextTour(tour));
     }
 
     public void registerListener(NextTourListener listener) {

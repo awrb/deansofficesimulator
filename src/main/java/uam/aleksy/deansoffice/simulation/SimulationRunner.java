@@ -13,6 +13,7 @@ import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
 import uam.aleksy.deansoffice.tour.NextTourPublisher;
 import uam.aleksy.deansoffice.tour.TourRepository;
+import uam.aleksy.deansoffice.tour.data.Tour;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
@@ -153,9 +154,9 @@ public class SimulationRunner implements CommandLineRunner {
 
             // the round is over
 
-            tourRepository.addNewTour(applicantsInTour);
+            Tour tour = tourRepository.addNewTour(applicantsInTour);
 
-            nextTourPublisher.notifyNextTour();
+            nextTourPublisher.notifyNextTour(tour);
         }
 
         log.info("Queue is empty");
