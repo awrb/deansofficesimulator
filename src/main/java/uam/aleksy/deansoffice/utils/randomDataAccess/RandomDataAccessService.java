@@ -1,24 +1,22 @@
 package uam.aleksy.deansoffice.utils.randomDataAccess;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import uam.aleksy.deansoffice.applicant.ApplicantRepository;
 import uam.aleksy.deansoffice.applicant.data.Student;
+import uam.aleksy.deansoffice.queue.OfficeQueue;
 
 import java.util.Optional;
 
 @Service
 public class RandomDataAccessService {
 
-    private ApplicantRepository applicantRepository;
+    private OfficeQueue officeQueue;
 
-    @Autowired
-    public RandomDataAccessService(ApplicantRepository applicantRepository) {
-        this.applicantRepository = applicantRepository;
+    public RandomDataAccessService(OfficeQueue officeQueue) {
+        this.officeQueue = officeQueue;
     }
 
     public Optional<Student> getRandomStudent() {
-        return applicantRepository.getApplicants()
+        return officeQueue.getQueue()
                 .stream()
                 .filter(applicant -> applicant.getClass().equals(Student.class))
                 .map(Student.class::cast)

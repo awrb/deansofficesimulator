@@ -4,8 +4,6 @@ public class Task {
 
     private int difficulty;
 
-    private Applicant applicant;
-
     // TODO czas w rundach
 
     public Task(int difficulty) {
@@ -13,19 +11,6 @@ public class Task {
     }
 
     public Task() {
-    }
-
-    public Task(int difficulty, Applicant applicant) {
-        this.difficulty = difficulty;
-        this.applicant = applicant;
-    }
-
-    public Applicant getApplicant() {
-        return applicant;
-    }
-
-    public void setApplicant(Applicant applicant) {
-        this.applicant = applicant;
     }
 
     public int getDifficulty() {

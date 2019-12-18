@@ -1,9 +1,21 @@
 package uam.aleksy.deansoffice.applicant.data;
 
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.util.List;
 import java.util.Optional;
 
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Student.class, name = "Student"),
+        @JsonSubTypes.Type(value = Dean.class, name = "Dean"),
+        @JsonSubTypes.Type(value = Acquaintance.class, name = "Acquaintance"),
+        @JsonSubTypes.Type(value = DoctoralStudent.class, name = "DoctoralStudent"),
+        @JsonSubTypes.Type(value = Adjunct.class, name = "Adjunct"),
+        @JsonSubTypes.Type(value = Professor.class, name = "Professor")}
+)
 public abstract class Applicant {
 
     private List<Task> tasks; // TODO walidacja max 3
@@ -11,19 +23,6 @@ public abstract class Applicant {
     private String name;
 
     private int roundsWaited;
-
-
-    private Long id;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
 
     public int getRoundsWaited() {
         return roundsWaited;
@@ -61,23 +60,6 @@ public abstract class Applicant {
 
     public Optional<Task> getNextTask() {
         return tasks.stream().findFirst();
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (!obj.getClass().equals(this.getClass())) {
-            return false;
-        }
-
-        return id.equals(((Applicant) obj).getId());
     }
 
     public void removeTask() {

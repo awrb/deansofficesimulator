@@ -11,7 +11,7 @@ import uam.aleksy.deansoffice.tour.summary.data.TourSummary;
 import java.util.List;
 
 @RestController
-@RequestMapping("tour")
+@RequestMapping("tour-summary")
 public class TourSummaryService {
 
     private TourSummaryRepository tourSummaryRepository;

@@ -4,17 +4,13 @@ import com.github.javafaker.Faker;
 import uam.aleksy.deansoffice.applicant.data.*;
 
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class RandomApplicantFactory {
-
-    private static AtomicLong applicantIdGenerator;
 
     private static Faker faker;
 
     static {
         faker = new Faker();
-        applicantIdGenerator = new AtomicLong(0);
     }
 
     public static Applicant getRandomApplicant() {
@@ -40,7 +36,6 @@ public class RandomApplicantFactory {
         }
 
         applicant.setName(faker.name().firstName());
-        applicant.setId(applicantIdGenerator.getAndIncrement());
 
         // todo read from properies
         applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 5,1, 6));

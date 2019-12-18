@@ -14,10 +14,12 @@ import uam.aleksy.deansoffice.queue.OfficeQueue;
 import uam.aleksy.deansoffice.tour.NextTourPublisher;
 import uam.aleksy.deansoffice.tour.TourRepository;
 import uam.aleksy.deansoffice.tour.data.Tour;
+import uam.aleksy.deansoffice.utils.dataGeneration.RandomApplicantFactory;
 
 import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 
 @Log
@@ -58,12 +60,18 @@ public class SimulationRunner implements CommandLineRunner {
     private void init() {
         // populate queue with some applicants so the simulation can run
         queue.flush();
-        queue.addAll(applicantRepository.getApplicants());
+
+        List<Applicant> applicants = new ArrayList<>();
+        IntStream.rangeClosed(1, 100).forEach(i -> {
+            applicants.add(RandomApplicantFactory.getRandomApplicant());
+        });
+
+        queue.addAll(applicants);
     }
 
     private void slowSimulationDown() {
         try {
-            Thread.sleep(300);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
     }
@@ -75,7 +83,7 @@ public class SimulationRunner implements CommandLineRunner {
 
         Predicate<Employee> energyLeftPredicate = employee -> employee.getEnergyLeft() > 0;
 
-        while (!queue.isEmpty() && !workCoordinationService.helpedEveryApplicant()) {
+        while (!queue.isEmpty()) {
             log.info("Remaining in queue: " + queue.getQueue().size());
             Set<Applicant> applicantsInTour = new HashSet<>();
 
