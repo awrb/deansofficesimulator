@@ -71,7 +71,7 @@ public class SimulationRunner implements CommandLineRunner {
 
     private void slowSimulationDown() {
         try {
-            Thread.sleep(500);
+            Thread.sleep(0);
         } catch (InterruptedException e) {
         }
     }

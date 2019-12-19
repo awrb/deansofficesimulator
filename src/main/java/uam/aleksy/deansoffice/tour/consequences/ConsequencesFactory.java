@@ -1,5 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences;
 
+import lombok.extern.java.Log;
 import uam.aleksy.deansoffice.applicant.data.*;
 import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
 import uam.aleksy.deansoffice.tour.consequences.data.ConsequenceContext;
@@ -7,6 +8,7 @@ import uam.aleksy.deansoffice.tour.consequences.enums.ConsequenceType;
 
 import java.util.Optional;
 
+@Log
 public class ConsequencesFactory {
 
     public static Consequence createConsequence(Applicant applicant, ConsequenceContext consequenceContext) {
@@ -43,9 +45,13 @@ public class ConsequencesFactory {
         } else if (clazz.equals(Acquaintance.class)) {
             consequence.setConsequenceType(ConsequenceType.COMPLAIN);
             consequence.setConsequenceValue(((Acquaintance) applicant).getMinutesComplained());
-        } else { // TODO DEAN
+        } else {
             consequence.setConsequenceType(ConsequenceType.FIRE_EMPLOYEE);
-            consequence.setConsequenceValue("PLACEHOLDER");
+            if (consequenceContext != null) {
+                consequence.setConsequenceValue(consequenceContext.getFiredEmployee().getName());
+            } else {
+                consequence.setConsequenceValue("N\\A");
+            }
         }
 
         return consequence;

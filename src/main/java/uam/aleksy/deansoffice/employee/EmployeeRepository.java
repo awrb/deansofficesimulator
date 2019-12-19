@@ -44,14 +44,11 @@ public class EmployeeRepository {
         employeeApplicantBiMap.remove(employee);
     }
 
-    public void removeEmployeeByApplicant(Applicant applicant) {
+    public Employee removeEmployeeByApplicant(Applicant applicant) {
         log.info("Removing employee helping " + applicant.getName());
         Employee employee = employeeApplicantBiMap.inverse().get(applicant);
         employeeApplicantBiMap.remove(employee);
         employees.remove(employee);
-    }
-
-    public Employee getApplicantsEmployee(Applicant applicant) {
-        return employeeApplicantBiMap.inverse().get(applicant);
+        return employee;
     }
 }

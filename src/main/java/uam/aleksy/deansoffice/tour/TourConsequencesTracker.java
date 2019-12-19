@@ -102,10 +102,15 @@ public class TourConsequencesTracker implements NextTourListener {
                 ((Student) applicant).incrementBeersToDrink();
             }
         } else if (applicantClazz.equals(Dean.class)) {
-            // TODO poprawa logiki i magic number
+            // TODO magic number
             if (roundsWaited > 0) {
                 // in other words, fire him
-                employeeRepository.removeEmployeeByApplicant(applicant);
+                Employee employee = employeeRepository.removeEmployeeByApplicant(applicant);
+                // bug
+                if (employee != null) {
+                    consequenceContext = new ConsequenceContext();
+                    consequenceContext.setFiredEmployee(employee);
+                }
             }
         } else if (applicantClazz.equals(Professor.class)) {
             ((Professor) applicant).incrementDifferentialDegree();
