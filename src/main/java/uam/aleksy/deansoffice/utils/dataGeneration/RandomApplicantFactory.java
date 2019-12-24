@@ -1,19 +1,31 @@
 package uam.aleksy.deansoffice.utils.dataGeneration;
 
 import com.github.javafaker.Faker;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.*;
 
+import javax.annotation.PostConstruct;
 import java.util.Random;
 
+@Component
 public class RandomApplicantFactory {
 
-    private static Faker faker;
+    private Faker faker;
 
-    static {
+    private RandomTaskFactory randomTaskFactory;
+
+    @Autowired
+    public RandomApplicantFactory(RandomTaskFactory randomTaskFactory) {
+        this.randomTaskFactory = randomTaskFactory;
+    }
+
+    @PostConstruct
+    private void init() {
         faker = new Faker();
     }
 
-    public static Applicant getRandomApplicant() {
+    public Applicant getRandomApplicant() {
 
         Random random = new Random();
 
@@ -38,7 +50,7 @@ public class RandomApplicantFactory {
         applicant.setName(faker.name().firstName());
 
         // todo read from properies
-        applicant.setTasks(RandomTaskFactory.getRandomTasks(1, 5,1, 6));
+        applicant.setTasks(randomTaskFactory.getRandomTasks(1, 5));
 
         return applicant;
 

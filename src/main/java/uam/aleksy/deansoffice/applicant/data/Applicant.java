@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.applicant.data;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -56,8 +57,10 @@ public abstract class Applicant {
         this.tasks = tasks;
     }
 
+    @JsonIgnore
     public abstract int getPriority();
 
+    @JsonIgnore
     public Optional<Task> getNextTask() {
         return tasks.stream().findFirst();
     }

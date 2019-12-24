@@ -1,0 +1,1989 @@
+[
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Tamera",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Michael",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Flo",
+    "roundsWaited": 0,
+    "differentialDegree": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Zackary",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Fletcher",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Les",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Leeanna",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Morton",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Dione",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Chester",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Letitia",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Olga",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Jae",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Derick",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Felton",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Josh",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Vicente",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Hermine",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Granville",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Dann",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Vincenzo",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Mitchell",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Dean",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Tiffany",
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Elina",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Scott",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Irish",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Cleo",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Erin",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Gail",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Lorenzo",
+    "roundsWaited": 0,
+    "differentialDegree": 0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Jackie",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Marth",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Anthony",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Gaylord",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Lincoln",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Remedios",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Brittany",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Carol",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Dick",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Jarod",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Katharina",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Rory",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Priscila",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Dewitt",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Walter",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Mao",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Reyna",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Cameron",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Long",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Gwendolyn",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Boris",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Lorrine",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Lacy",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Chester",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Bruno",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Ronny",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Olimpia",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Camille",
+    "roundsWaited": 0,
+    "differentialDegree": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Shanda",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Marquetta",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Sergio",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "George",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Devin",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Elidia",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Floy",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Sonya",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Bebe",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "German",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Eladia",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Anthony",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Gene",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Bruna",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Antone",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Lizabeth",
+    "roundsWaited": 0,
+    "PRIORITY": 2
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Sol",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Luis",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Cody",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Stacy",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Armando",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Dallas",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Franklyn",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Fannie",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Forest",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Sheldon",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Barton",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Jed",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Yolonda",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Alana",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Bertram",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Joel",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Karoline",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Barney",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Marlon",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Branden",
+    "roundsWaited": 0,
+    "extraTasks": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Cleveland",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Deneen",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Clifton",
+    "roundsWaited": 0,
+    "minutesComplained": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Alejandro",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Crissy",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Jon",
+    "roundsWaited": 0,
+    "bringsFlowers": false,
+    "bringsChocolates": false,
+    "beersToDrink": 0,
+    "markPunishment": 0.0
+  }
+]

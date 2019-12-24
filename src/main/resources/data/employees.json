@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Valentine",
+    "busy": false,
+    "activityCycle": [
+      "WORK_ON_TASK",
+      "PHONE",
+      "SMOKE",
+      "WORK_ON_TASK",
+      "PHONE"
+    ],
+    "currentActivityIndex": 0,
+    "energyLeft": 6,
+    "initialEnergy": 6,
+    "working": true,
+    "currentActivity": "WORK_ON_TASK"
+  },
+  {
+    "name": "Marshall",
+    "busy": false,
+    "activityCycle": [
+      "WORK_ON_TASK",
+      "SMOKE",
+      "FOOD",
+      "SMOKE",
+      "FOOD"
+    ],
+    "currentActivityIndex": 0,
+    "energyLeft": 6,
+    "initialEnergy": 6,
+    "working": true,
+    "currentActivity": "WORK_ON_TASK"
+  },
+  {
+    "name": "Alton",
+    "busy": false,
+    "activityCycle": [
+      "WORK_ON_TASK",
+      "PHONE",
+      "PHONE",
+      "PHONE",
+      "PHONE"
+    ],
+    "currentActivityIndex": 0,
+    "energyLeft": 6,
+    "initialEnergy": 6,
+    "working": true,
+    "currentActivity": "WORK_ON_TASK"
+  }
+]

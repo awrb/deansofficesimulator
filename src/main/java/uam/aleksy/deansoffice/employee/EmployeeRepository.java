@@ -6,9 +6,11 @@ import lombok.extern.java.Log;
 import org.springframework.stereotype.Repository;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.data.Employee;
-import uam.aleksy.deansoffice.utils.dataGeneration.RandomEmployeeFactory;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -17,15 +19,14 @@ import java.util.stream.Collectors;
 @Log
 public class EmployeeRepository {
 
-    private static final int NUM_OF_EMPLOYEES = 3;
 
     private List<Employee> employees;
     private BiMap<Employee, Applicant> employeeApplicantBiMap;
 
     @PostConstruct
-    private void createEmployees() {
+    private void init() {
         employeeApplicantBiMap = HashBiMap.create();
-        employees = RandomEmployeeFactory.getRandomEmployees(NUM_OF_EMPLOYEES);
+        employees = new ArrayList<>();
     }
 
     public List<Employee> getEmployees(Predicate<Employee> predicate) {
@@ -50,5 +51,9 @@ public class EmployeeRepository {
         employeeApplicantBiMap.remove(employee);
         employees.remove(employee);
         return employee;
+    }
+
+    public void addEmployees(Collection<Employee> employeesToAdd) {
+        employees.addAll(employeesToAdd);
     }
 }

@@ -1,5 +1,6 @@
 package uam.aleksy.deansoffice.queue;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 
@@ -12,6 +13,13 @@ import java.util.Queue;
 public class OfficeQueue {
 
     private Queue<Applicant> queue;
+
+    private QueueRemovalPublisher removalPublisher;
+
+    @Autowired
+    public OfficeQueue(QueueRemovalPublisher removalPublisher) {
+        this.removalPublisher = removalPublisher;
+    }
 
     @PostConstruct
     private void init() {
@@ -27,7 +35,7 @@ public class OfficeQueue {
     }
 
     public void remove() {
-        queue.remove();
+        removalPublisher.notifyListeners(queue.remove());
     }
 
     public void add(Applicant applicant) {

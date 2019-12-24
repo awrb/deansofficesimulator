@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.employee.data;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import uam.aleksy.deansoffice.applicant.data.Task;
 import uam.aleksy.deansoffice.employee.enums.Activity;
 
@@ -16,6 +17,11 @@ public class Employee {
     private boolean busy;
     private List<Activity> activityCycle;
     private int currentActivityIndex;
+
+    public int getInitialEnergy() {
+        return initialEnergy;
+    }
+
     private int energyLeft;
     private int initialEnergy;
 
@@ -106,6 +112,7 @@ public class Employee {
         energyLeft = initialEnergy;
     }
 
+    @JsonIgnore
     public boolean isWorking() {
         return activityCycle.get(currentActivityIndex).equals(Activity.WORK_ON_TASK);
     }
@@ -119,6 +126,7 @@ public class Employee {
         currentActivityIndex += 1;
     }
 
+    @JsonIgnore
     public Activity getCurrentActivity() {
         return activityCycle.get(currentActivityIndex);
     }
