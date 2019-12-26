@@ -26,8 +26,6 @@ public class EmployeeTourManagerTest {
         employeeRepository.addEmployees(RandomEmployeeFactory.getRandomEmployees(3));
 
         // when
-
-        log.info(""+(tourManager==null));
         tourManager.finishRound();
 
         // then

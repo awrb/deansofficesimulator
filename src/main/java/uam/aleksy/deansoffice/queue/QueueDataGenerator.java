@@ -33,8 +33,7 @@ public class QueueDataGenerator {
 
 
     public List<Employee> generateEmployees() {
-        List<Employee> employees = RandomEmployeeFactory.getRandomEmployees(numOfEmployees);
-        return employees;
+        return RandomEmployeeFactory.getRandomEmployees(numOfEmployees);
     }
 
     public List<Applicant> generateApplicants() {
