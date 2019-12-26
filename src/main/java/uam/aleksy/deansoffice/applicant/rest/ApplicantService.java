@@ -2,23 +2,25 @@ package uam.aleksy.deansoffice.applicant.rest;
 
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import uam.aleksy.deansoffice.applicant.ApplicantRepository;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
 
-@Log
 @RestController
+@Log
 @RequestMapping("applicant")
 public class ApplicantService {
 
     private OfficeQueue officeQueue;
 
+    private ApplicantRepository repository;
+
     @Autowired
-    public ApplicantService(OfficeQueue officeQueue) {
+    public ApplicantService(OfficeQueue officeQueue, ApplicantRepository repository) {
         this.officeQueue = officeQueue;
+        this.repository = repository;
     }
 
     /**
@@ -31,5 +33,10 @@ public class ApplicantService {
         officeQueue.add(applicant);
         log.info("Added a new applicant to the queue: " + applicant.getName());
         return applicant;
+    }
+
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<Applicant> getApplicant(@PathVariable Long id) {
+        return ResponseEntity.of(repository.getById(id));
     }
 }

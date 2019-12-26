@@ -67,8 +67,9 @@ public class OfficeQueueTest {
 
     private OfficeQueue getQueue() {
         QueueRemovalPublisher removalPublisher = Mockito.mock(QueueRemovalPublisher.class);
-        OfficeQueue queue = new OfficeQueue(removalPublisher);
-        ReflectionTestUtils.invokeMethod(queue, "init", null);
+        QueueAdditionPublisher additionPublisher = Mockito.mock(QueueAdditionPublisher.class);
+        OfficeQueue queue = new OfficeQueue(removalPublisher, additionPublisher);
+        ReflectionTestUtils.invokeMethod(queue, "init", new Object());
         return queue;
     }
 }

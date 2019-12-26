@@ -16,9 +16,12 @@ public class OfficeQueue {
 
     private QueueRemovalPublisher removalPublisher;
 
+    private QueueAdditionPublisher additionPublisher;
+
     @Autowired
-    public OfficeQueue(QueueRemovalPublisher removalPublisher) {
+    public OfficeQueue(QueueRemovalPublisher removalPublisher, QueueAdditionPublisher additionPublisher) {
         this.removalPublisher = removalPublisher;
+        this.additionPublisher = additionPublisher;
     }
 
     @PostConstruct
@@ -28,6 +31,7 @@ public class OfficeQueue {
 
     public void addAll(List<Applicant> applicants) {
         queue.addAll(applicants);
+        additionPublisher.applicantsAdded(applicants);
     }
 
     public Queue<Applicant> getQueue() {
@@ -40,6 +44,7 @@ public class OfficeQueue {
 
     public void add(Applicant applicant) {
         queue.add(applicant);
+        additionPublisher.applicantAdded(applicant);
     }
 
     public boolean isEmpty() {

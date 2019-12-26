@@ -51,7 +51,8 @@ public class SimulationEngine {
         while (!employeeRepository.getEmployees(employee -> true).isEmpty()) {
 
             if (queue.isEmpty()) {
-                queueDataGenerator.generateApplicants();
+                queue.addAll(queueDataGenerator.generateApplicants());
+
             }
 
             log.info("Remaining in queue: " + queue.getQueue().size());
@@ -132,6 +133,11 @@ public class SimulationEngine {
             // the round is over
             tourManager.finishRound();
         }
-        log.info("Queue is empty");
+
+        if (queue.getQueue().isEmpty()) {
+            log.info("Queue is empty");
+        } else {
+            log.info("All employees have been fired");
+        }
     }
 }

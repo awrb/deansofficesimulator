@@ -23,6 +23,16 @@ public abstract class Applicant {
 
     private String name;
 
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private int roundsWaited;
 
     public int getRoundsWaited() {
