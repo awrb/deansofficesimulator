@@ -50,11 +50,7 @@ public class TourManager implements QueueRemovalListener {
 
 
     public void finishRound() {
-        log.info(""+(applicantsForTour == null));
-        log.info(""+(tourRepository==null));
         Tour newTour = tourRepository.addNewTour(applicantsForTour);
-        log.info(""+(newTour==null));
-        log.info(""+(nextTourPublisher==null));
         nextTourPublisher.notifyNextTour(newTour);
     }
 }

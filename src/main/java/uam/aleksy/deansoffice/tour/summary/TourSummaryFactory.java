@@ -6,12 +6,10 @@ import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
 import uam.aleksy.deansoffice.employee.enums.Activity;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
-import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
 import uam.aleksy.deansoffice.tour.data.Tour;
 import uam.aleksy.deansoffice.tour.summary.data.TourSummary;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Component
@@ -28,9 +26,9 @@ public class TourSummaryFactory {
         this.employeeRepository = employeeRepository;
     }
 
-    TourSummary createTourSummary(Tour tour, List<Consequence> consequences) {
+    TourSummary createTourSummary(Tour tour) {
         return new TourSummary(
-                consequences,
+                tour.getConsequences(),
                 createEmployeeNameToActivityMap(),
                 calculateExpectedWaitingTime(),
                 createApplicantTypeCounters(),

@@ -7,12 +7,10 @@ import uam.aleksy.deansoffice.applicant.data.*;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
 import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceLogger;
-import uam.aleksy.deansoffice.tour.consequences.ConsequenceRepository;
 import uam.aleksy.deansoffice.tour.consequences.ConsequencesFactory;
 import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
 import uam.aleksy.deansoffice.tour.consequences.data.ConsequenceContext;
 import uam.aleksy.deansoffice.tour.data.Tour;
-import uam.aleksy.deansoffice.tour.summary.TourSummaryManager;
 import uam.aleksy.deansoffice.utils.randomDataAccess.RandomDataAccessService;
 
 import javax.annotation.PostConstruct;
@@ -30,11 +28,7 @@ public class TourConsequencesTracker implements NextTourListener {
 
     private RandomDataAccessService randomDataAccessService;
 
-    private ConsequenceRepository consequenceRepository;
-
     private NextTourPublisher publisher;
-
-    private TourSummaryManager tourSummaryManager;
 
     private EmployeeRepository employeeRepository;
 
@@ -42,15 +36,11 @@ public class TourConsequencesTracker implements NextTourListener {
     @Autowired
     public TourConsequencesTracker(TourRepository tourRepository,
                                    RandomDataAccessService randomDataAccessService,
-                                   ConsequenceRepository consequenceRepository,
                                    NextTourPublisher publisher,
-                                   TourSummaryManager tourSummaryManager,
                                    EmployeeRepository employeeRepository) {
         this.tourRepository = tourRepository;
         this.randomDataAccessService = randomDataAccessService;
-        this.consequenceRepository = consequenceRepository;
         this.publisher = publisher;
-        this.tourSummaryManager = tourSummaryManager;
         this.employeeRepository = employeeRepository;
     }
 
@@ -81,12 +71,7 @@ public class TourConsequencesTracker implements NextTourListener {
             }
         });
 
-        consequenceRepository.add(tour, consequencesOfTour);
-
-        // TODO słabe miejsce na to, wywołanie tutaj by na pewno najpierw stworzono konsekwencje
-        // a dopiero potem podsumowanie
-        tourSummaryManager.summarizeTour(tour, consequencesOfTour);
-
+        tour.setConsequences(consequencesOfTour);
     }
 
     private ConsequenceContext applyConsequencesForApplicant(Applicant applicant) {
