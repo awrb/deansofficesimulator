@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import uam.aleksy.deansoffice.applicant.ApplicantRepository;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
 import uam.aleksy.deansoffice.employee.data.Employee;
@@ -31,9 +30,6 @@ public class Bootstrapper {
     private OfficeQueue queue;
 
     private DataSource dataSource;
-
-    private ApplicantRepository applicantRepository;
-
 
     @Autowired
     public Bootstrapper(QueueDataGenerator queueDataGenerator,
