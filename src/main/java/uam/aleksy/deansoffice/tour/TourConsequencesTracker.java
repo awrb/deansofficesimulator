@@ -105,8 +105,9 @@ public class TourConsequencesTracker implements NextTourListener {
         } else if (applicantClazz.equals(Dean.class)) {
             // TODO magic number
             if (roundsWaited > 0) {
-                // in other words, fire him
-                Employee employee = employeeRepository.removeEmployeeByApplicant(applicant);
+                // fire him
+                Employee employee = employeeRepository.getApplicantsEmployee(applicant);
+                employeeRepository.removeEmployee(employee);
                 // bug
                 if (employee != null) {
                     consequenceContext = new ConsequenceContext();

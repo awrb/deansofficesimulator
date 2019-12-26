@@ -11,10 +11,6 @@ public class Student extends Applicant {
     public Student() {
     }
 
-    public Student(boolean bringsFlowers, boolean bringsChocolates) {
-        this.bringsFlowers = bringsFlowers;
-        this.bringsChocolates = bringsChocolates;
-    }
 
     public float getMarkPunishment() {
         return markPunishment;

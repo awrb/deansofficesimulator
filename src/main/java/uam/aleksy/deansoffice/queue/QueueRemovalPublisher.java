@@ -1,5 +1,6 @@
 package uam.aleksy.deansoffice.queue;
 
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 

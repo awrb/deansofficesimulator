@@ -10,7 +10,6 @@ import uam.aleksy.deansoffice.employee.data.Employee;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -33,6 +32,11 @@ public class EmployeeRepository {
         return employees.stream().filter(predicate).collect(Collectors.toList());
     }
 
+    public void removeEmployee(Employee employee) {
+        employeeApplicantBiMap.remove(employee);
+        employees.remove(employee);
+    }
+
     public Applicant getEmployeesApplicant(Employee employee) {
         return employeeApplicantBiMap.get(employee);
     }
@@ -41,15 +45,14 @@ public class EmployeeRepository {
         employeeApplicantBiMap.put(employee, applicant);
     }
 
-    public void removeEmployee(Employee employee) {
+    public void unassignEmployee(Employee employee) {
         employeeApplicantBiMap.remove(employee);
     }
 
-    public Employee removeEmployeeByApplicant(Applicant applicant) {
+    // do zwalniania
+    public Employee getApplicantsEmployee(Applicant applicant) {
         log.info("Removing employee helping " + applicant.getName());
         Employee employee = employeeApplicantBiMap.inverse().get(applicant);
-        employeeApplicantBiMap.remove(employee);
-        employees.remove(employee);
         return employee;
     }
 

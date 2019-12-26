@@ -23,20 +23,15 @@ public class WorkCoordinationService {
         this.officeQueue = queue;
     }
 
-    public void continueHelping(Employee employee, Applicant applicant, Task task) {
-        workOnNewTask(employee, applicant, task);
+    public void workOnNewTask(Employee employee, Applicant applicant, Task task) {
         log.info(employee.getName() + " now helping " + applicant.getClass().getSimpleName() + " " + applicant.getName()
                 + " with task of difficulty " + task.getDifficulty());
-
-    }
-
-    public void workOnNewTask(Employee employee, Applicant applicant, Task task) {
         employee.workOnTask(task);
         applicant.removeTask();
     }
 
     public void finishHelping(Employee employee, Applicant applicant) {
-        employeeRepository.removeEmployee(employee);
+        employeeRepository.unassignEmployee(employee);
         employee.setBusy(false);
         log.info(employee.getName() + " finished helping " + applicant.getName());
     }

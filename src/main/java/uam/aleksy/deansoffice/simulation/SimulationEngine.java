@@ -80,7 +80,7 @@ public class SimulationEngine {
                             Task task = nextTask.get();
 
                             if (employee.canWorkOnTask(task)) {
-                                workCoordinationService.continueHelping(employee, applicant, task);
+                                workCoordinationService.workOnNewTask(employee, applicant, task);
                                 return;
                             }
 

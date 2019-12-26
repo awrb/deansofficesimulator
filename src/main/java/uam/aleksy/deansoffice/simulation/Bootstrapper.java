@@ -3,6 +3,7 @@ package uam.aleksy.deansoffice.simulation;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;

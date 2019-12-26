@@ -54,4 +54,8 @@ public class TourSummary {
     public int getQueueSize() {
         return queueSize;
     }
+
+    public void setTourId(Long tourId) {
+        this.tourId = tourId;
+    }
 }

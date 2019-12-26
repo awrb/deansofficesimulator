@@ -50,7 +50,6 @@ public class RandomEmployeeFactory {
             randomOrderActivities.add(activities[index]);
         });
 
-        // TODO make sure there's at least one work
         return randomOrderActivities;
 
 

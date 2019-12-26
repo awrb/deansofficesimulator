@@ -23,7 +23,7 @@ public class QueueDataGenerator {
     private RandomApplicantFactory randomApplicantFactory;
 
     @Autowired
-    public QueueDataGenerator(OfficeQueue queue, RandomApplicantFactory randomApplicantFactory,
+    public QueueDataGenerator(RandomApplicantFactory randomApplicantFactory,
                               @Value("${N}") int numOfApplicants, @Value("${M}") int numOfEmployees) {
         this.numOfApplicants = numOfApplicants;
         this.numOfEmployees = numOfEmployees;

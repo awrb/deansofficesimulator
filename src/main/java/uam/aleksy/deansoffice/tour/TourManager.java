@@ -1,5 +1,7 @@
 package uam.aleksy.deansoffice.tour;
 
+import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.queue.QueueRemovalListener;
@@ -11,6 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Component
+@Log
 public class TourManager implements QueueRemovalListener {
 
     private TourRepository tourRepository;
@@ -21,6 +24,7 @@ public class TourManager implements QueueRemovalListener {
 
     private Set<Applicant> applicantsForTour;
 
+    @Autowired
     public TourManager(TourRepository tourRepository, NextTourPublisher nextTourPublisher,
                        QueueRemovalPublisher removalPublisher) {
         this.tourRepository = tourRepository;
@@ -37,7 +41,7 @@ public class TourManager implements QueueRemovalListener {
 
     @Override
     public void onRemove(Applicant applicant) {
-        applicantsForTour.add(applicant);
+        addApplicant(applicant);
     }
 
     public void addApplicant(Applicant applicant) {
@@ -46,7 +50,11 @@ public class TourManager implements QueueRemovalListener {
 
 
     public void finishRound() {
+        log.info(""+(applicantsForTour == null));
+        log.info(""+(tourRepository==null));
         Tour newTour = tourRepository.addNewTour(applicantsForTour);
+        log.info(""+(newTour==null));
+        log.info(""+(nextTourPublisher==null));
         nextTourPublisher.notifyNextTour(newTour);
     }
 }
