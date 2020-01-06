@@ -24,6 +24,6 @@ public class SimulationRunner implements CommandLineRunner {
     public void run(String... args) {
 
         simulationStartPublisher.notifyStart();
-        engine.runSimulation();
+//        engine.runSimulation();
     }
 }

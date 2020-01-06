@@ -38,6 +38,8 @@ public class TourManagerIntegrationTest {
         tourManager.finishRound();
 
         // then
+
+        // end up with two applicants in tour, one from calling addApplicant and one from popping the queue
         Assertions.assertEquals(tourRepository.getLastTourApplicants().size(), 2);
     }
 

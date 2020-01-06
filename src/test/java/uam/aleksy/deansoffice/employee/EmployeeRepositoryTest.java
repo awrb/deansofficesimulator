@@ -14,7 +14,7 @@ public class EmployeeRepositoryTest {
 
     private EmployeeRepository getRepository() {
         EmployeeRepository employeeRepository = new EmployeeRepository();
-        ReflectionTestUtils.invokeMethod(employeeRepository, "init", null);
+        ReflectionTestUtils.invokeMethod(employeeRepository, "init", (Object[]) null);
         return employeeRepository;
     }
 
