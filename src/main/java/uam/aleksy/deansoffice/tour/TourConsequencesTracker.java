@@ -55,7 +55,6 @@ public class TourConsequencesTracker implements NextTourListener {
     public void nextTour(Tour tour) {
         List<Consequence> consequencesOfTour = new ArrayList<>();
 
-        // TODO nie tylko z ostatniej tury ale każdy
         Set<Applicant> applicants = tourRepository.getLastTourApplicants();
 
         applicants.forEach(applicant -> {

@@ -78,11 +78,12 @@ public class SimulationEngine {
 
                         Applicant applicant = employeeRepository.getEmployeesApplicant(employee);
 
-                        tourManager.addApplicant(applicant);
 
                         Optional<Task> nextTask = applicant.getNextTask();
 
                         if (nextTask.isPresent()) {
+                            tourManager.addApplicant(applicant);
+
                             Task task = nextTask.get();
 
                             if (employee.canWorkOnTask(task)) {
@@ -94,16 +95,13 @@ public class SimulationEngine {
                             return;
                         }
 
+
                         workCoordinationService.finishHelping(employee, applicant);
                         return;
                     }
 
                     // employee is not busy, get a new person from the queue for him
                     Applicant applicant = queue.peek();
-
-                    if (applicant == null) {
-                        return;
-                    }
 
                     if (!employee.isWorking()) {
                         log.info(employee.getName() + " is not working, current activity: "
@@ -112,16 +110,20 @@ public class SimulationEngine {
                         return;
                     }
 
-                    Task task = applicant.getNextTask().orElseThrow(RuntimeException::new); // when someone comes with no tasks
 
-                    workCoordinationService.startHelping(employee, applicant);
+                    Optional<Task> task = applicant.getNextTask();
 
                     queue.remove();
 
-                    tourManager.addApplicant(applicant);
+                    if (!task.isPresent()) {
+                        // when someone comes with no tasks
+                        return;
+                    }
 
-                    if (employee.canWorkOnTask(task)) {
-                        workCoordinationService.workOnNewTask(employee, applicant, task);
+                    workCoordinationService.startHelping(employee, applicant);
+
+                    if (employee.canWorkOnTask(task.get())) {
+                        workCoordinationService.workOnNewTask(employee, applicant, task.get());
                         return;
                     }
 
@@ -133,7 +135,6 @@ public class SimulationEngine {
                 employeesWithEnergy = employeeRepository
                         .getEmployees(energyLeftPredicate);
             }
-
 
             // the round is over
             tourManager.finishRound();
