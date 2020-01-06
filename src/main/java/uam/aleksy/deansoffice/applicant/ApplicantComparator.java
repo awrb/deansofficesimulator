@@ -6,22 +6,29 @@ import java.util.Comparator;
 
 public class ApplicantComparator implements Comparator<Applicant> {
 
+    //TODO return 1 if rhs should be before lhs
+    //     return -1 if lhs should be before rhs
+    //     return 0 otherwise (meaning the order stays the same)
     @Override
-    public int compare(Applicant o1, Applicant o2) {
+    public int compare(Applicant lhs, Applicant rhs) {
 
-        Class<? extends Applicant> o1Clazz = o1.getClass();
-        Class<? extends Applicant> o2Clazz = o2.getClass();
+        Class<? extends Applicant> lhsClazz = lhs.getClass();
+        Class<? extends Applicant> rhsClazz = rhs.getClass();
 
-        if (o1Clazz.equals(Student.class)) {
-            return compareStudentCase((Student) o1, o2);
+        if (lhsClazz.equals(rhsClazz)) {
+            return 0;
         }
 
-        if (o2Clazz.equals(Student.class)) {
+        if (lhsClazz.equals(Student.class)) {
+            return compareStudentCase((Student) lhs, rhs);
+        }
+
+        if (rhsClazz.equals(Student.class)) {
             // multiply by -1 because we reversed o2 and o1 params
-            return compareStudentCase((Student) o2, o1) * (-1);
+            return compareStudentCase((Student) rhs, lhs) * (-1);
         }
 
-        return o1.getPriority() - o2.getPriority();
+        return rhs.getPriority() > lhs.getPriority() ? 1 : -1;
     }
 
     private int compareStudentCase(Student student, Applicant applicant) {
@@ -32,13 +39,13 @@ public class ApplicantComparator implements Comparator<Applicant> {
         }
 
         if (applicantClazz.equals(DoctoralStudent.class) || applicantClazz.equals(Acquaintance.class)) {
-            return student.isBringsChocolates() ? 1 : -1;
+            return student.isBringsChocolates() ? -1 : 1;
         }
 
         if (applicantClazz.equals(Adjunct.class)) {
-            return student.isBringsChocolates() && student.isBringsFlowers() ? 1 : -1;
+            return student.isBringsChocolates() && student.isBringsFlowers() ? -1 : 1;
         }
 
-        return student.getPriority() - applicant.getPriority();
+        return 1;
     }
 }
