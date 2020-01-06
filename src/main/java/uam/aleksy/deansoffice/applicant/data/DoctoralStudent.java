@@ -3,7 +3,7 @@ package uam.aleksy.deansoffice.applicant.data;
 
 public class DoctoralStudent extends Applicant {
 
-    public final int PRIORITY = 2;
+    private static final int PRIORITY = 5;
 
     @Override
     public int getPriority() {

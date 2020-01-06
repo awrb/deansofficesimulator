@@ -2,11 +2,13 @@ package uam.aleksy.deansoffice.queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import uam.aleksy.deansoffice.applicant.ApplicantComparator;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 
 import javax.annotation.PostConstruct;
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 @Component
@@ -26,7 +28,7 @@ public class OfficeQueue {
 
     @PostConstruct
     private void init() {
-        queue = new LinkedList<>();
+        queue = new PriorityQueue<>(new ApplicantComparator());
     }
 
     public void addAll(List<Applicant> applicants) {
@@ -59,6 +61,15 @@ public class OfficeQueue {
         while (queue.peek() != null) {
             queue.remove();
         }
+    }
+
+    public Applicant[] getOrderedQueue() {
+        PriorityQueue<Applicant> priorityQueueCopy = new PriorityQueue<>(queue);
+        Applicant[] queueAsArray = priorityQueueCopy.toArray(new Applicant[queue.size()]);
+        Arrays.sort(queueAsArray, new ApplicantComparator());
+
+        Arrays.stream(queueAsArray).forEach(applicant -> System.out.println(applicant.getClass().getSimpleName()));
+        return queueAsArray;
     }
 }
 

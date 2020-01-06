@@ -232,8 +232,7 @@
     ],
     "name": "Ashli",
     "id": 11,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -408,8 +407,7 @@
     ],
     "name": "Monroe",
     "id": 20,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -759,8 +757,7 @@
     ],
     "name": "Marion",
     "id": 39,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1056,8 +1053,7 @@
     ],
     "name": "Christin",
     "id": 56,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1141,8 +1137,7 @@
     ],
     "name": "Mariann",
     "id": 61,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1239,8 +1234,7 @@
     ],
     "name": "Noble",
     "id": 66,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1278,8 +1272,7 @@
     ],
     "name": "Thomasena",
     "id": 69,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1322,8 +1315,7 @@
     ],
     "name": "Xochitl",
     "id": 72,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1648,8 +1640,7 @@
     ],
     "name": "Alec",
     "id": 91,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Student",
@@ -1775,8 +1766,7 @@
     ],
     "name": "Arnoldo",
     "id": 99,
-    "roundsWaited": 0,
-    "PRIORITY": 2
+    "roundsWaited": 0
   },
   {
     "@type": "Adjunct",

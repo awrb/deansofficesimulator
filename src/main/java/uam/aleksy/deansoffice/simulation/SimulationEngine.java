@@ -95,7 +95,6 @@ public class SimulationEngine {
                             return;
                         }
 
-
                         workCoordinationService.finishHelping(employee, applicant);
                         return;
                     }
