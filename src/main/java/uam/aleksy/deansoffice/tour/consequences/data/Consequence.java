@@ -1,49 +1,23 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.tour.consequences.enums.ConsequenceType;
+import uam.aleksy.deansoffice.applicant.data.Applicant;
 
 public class Consequence {
 
-
-    private ConsequenceType consequenceType;
-
-    public ConsequenceType getConsequenceType() {
-        return consequenceType;
-    }
-
-    public void setConsequenceType(ConsequenceType consequenceType) {
-        this.consequenceType = consequenceType;
-    }
-
-    public Consequence(ConsequenceType consequenceType, String applicantName, Object consequenceValue) {
-        this.consequenceType = consequenceType;
-        this.applicantName = applicantName;
-        this.consequenceValue = consequenceValue;
-    }
-
-    private String applicantName;
-
-    private Object consequenceValue;
+    protected Applicant applicant;
 
     public Consequence() {
     }
 
-
-    public String getApplicantName() {
-        return applicantName;
+    public Consequence(Applicant applicant) {
+        this.applicant = applicant;
     }
 
-    public void setApplicantName(String applicantName) {
-        this.applicantName = applicantName;
+    public Applicant getApplicant() {
+        return applicant;
     }
 
-
-
-    public Object getConsequenceValue() {
-        return consequenceValue;
-    }
-
-    public void setConsequenceValue(Object consequenceValue) {
-        this.consequenceValue = consequenceValue;
+    public void setApplicant(Applicant applicant) {
+        this.applicant = applicant;
     }
 }

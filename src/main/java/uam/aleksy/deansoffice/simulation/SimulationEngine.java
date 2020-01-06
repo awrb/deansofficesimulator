@@ -1,6 +1,7 @@
 package uam.aleksy.deansoffice.simulation;
 
 import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.applicant.data.Task;
@@ -24,23 +25,27 @@ public class SimulationEngine {
     private WorkCoordinationService workCoordinationService;
     private TourManager tourManager;
     private QueueDataGenerator queueDataGenerator;
+    private int simulationDelay; // miliseconds between every tour
 
     public SimulationEngine(OfficeQueue queue,
                             EmployeeRepository employeeRepository,
                             WorkCoordinationService workCoordinationService,
                             TourManager tourManager,
-                            QueueDataGenerator queueDataGenerator) {
+                            QueueDataGenerator queueDataGenerator,
+                            @Value("${simulation.delay}") int simulationDelay) {
         this.queue = queue;
         this.employeeRepository = employeeRepository;
         this.workCoordinationService = workCoordinationService;
         this.tourManager = tourManager;
         this.queueDataGenerator = queueDataGenerator;
+        this.simulationDelay = simulationDelay;
     }
 
 
     private void slowSimulationDown() {
         try {
-            Thread.sleep(300);
+            // todo inject from properties
+            Thread.sleep(simulationDelay);
         } catch (InterruptedException e) {
         }
     }

@@ -5,31 +5,8 @@ public class Student extends Applicant {
     private static final int PRIORITY = 1;
     private boolean bringsFlowers;
     private boolean bringsChocolates;
-    private int beersToDrink;
-    private float markPunishment;
 
     public Student() {
-    }
-
-
-    public float getMarkPunishment() {
-        return markPunishment;
-    }
-
-    public void incrementMarkPunishment() {
-        markPunishment += 0.5f;
-    }
-
-    public void incrementBeersToDrink() {
-        beersToDrink += 1;
-    }
-
-    public int getBeersToDrink() {
-        return beersToDrink;
-    }
-
-    public void setBeersToDrink(int beersToDrink) {
-        this.beersToDrink = beersToDrink;
     }
 
     public boolean isBringsFlowers() {

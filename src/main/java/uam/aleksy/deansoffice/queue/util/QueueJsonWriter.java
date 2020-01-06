@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
@@ -19,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 
 @Component
-/**
+/*
  * Utility bean that uses {@link QueueDataGenerator} to generate random queue data and then writes it into JSON files.
  */
 public class QueueJsonWriter {

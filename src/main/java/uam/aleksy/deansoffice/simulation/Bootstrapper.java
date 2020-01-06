@@ -31,6 +31,7 @@ public class Bootstrapper {
 
     private DataSource dataSource;
 
+
     @Autowired
     public Bootstrapper(QueueDataGenerator queueDataGenerator,
                         RandomApplicantFactory randomApplicantFactory,
@@ -54,7 +55,6 @@ public class Bootstrapper {
 
             List<Employee> employees = queueDataGenerator.generateEmployees();
             employeeRepository.addEmployees(employees);
-
             return;
         }
 
@@ -63,6 +63,7 @@ public class Bootstrapper {
         List<Employee> employees = QueueJsonReader.readEmployees();
 
         queue.addAll(applicants);
+
 
         employeeRepository.addEmployees(employees);
 

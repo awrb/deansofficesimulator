@@ -17,14 +17,8 @@ public class Employee {
     private boolean busy;
     private List<Activity> activityCycle;
     private int currentActivityIndex;
-
-    public int getInitialEnergy() {
-        return initialEnergy;
-    }
-
     private int energyLeft;
     private int initialEnergy;
-
     public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, int initialEnergy, String name) {
         this.busy = busy;
         this.activityCycle = activityCycle;
@@ -36,23 +30,8 @@ public class Employee {
     public Employee() {
     }
 
-    @Override
-    public int hashCode() {
-        return name.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-
-        if (!obj.getClass().equals(this.getClass())) {
-            return false;
-        }
-
-        return this.name.equals(((Employee) obj).name);
-
+    public int getInitialEnergy() {
+        return initialEnergy;
     }
 
     public int getCurrentActivityIndex() {

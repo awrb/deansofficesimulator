@@ -12,9 +12,9 @@ public class TourSummary {
     private List<Consequence> consequences;
     private Map<String, Activity> employeeNameToActivity; // co robi każdy z pracowników dziekanatu
     private int expectedWaitingTime; // jaki jest teoretyczny czas oczekiwania
-    private Map<Class<? extends Applicant>, Integer> applicantTypeCounters; // ile jest osób w kolejce
+    private Map<Class<? extends Applicant>, Integer> applicantTypeCounters; // ile jakich
     private Long tourId;
-    private int queueSize; // ile jakich
+    private int queueSize; // // ile jest osób w kolejce
 
     public TourSummary() {
     }
