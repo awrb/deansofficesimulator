@@ -1,7 +1,7 @@
 package uam.aleksy.deansoffice.utils;
 
 import uam.aleksy.deansoffice.applicant.data.*;
-import uam.aleksy.deansoffice.employee.enums.Opinion;
+import uam.aleksy.deansoffice.employee.enums.EmployeeReputation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ public class Constants {
 
     public static Map<Class<? extends Applicant>, Double> queueProbabilities;
 
-    public static Map<Opinion, Integer> opinionThresholds;
+    public static Map<EmployeeReputation, Integer> opinionThresholds;
 
     public static final double STUDENT_PROBABILITY = 0.65;
     public static final double DOCTORAL_STUDENT = 0.07;
@@ -29,6 +29,6 @@ public class Constants {
         queueProbabilities.put(Dean.class, 0.02);
 
         opinionThresholds = new HashMap<>();
-        opinionThresholds.put(Opinion.DOBRY_CZLOWIEK, 100);
+        opinionThresholds.put(EmployeeReputation.DOBRY_CZLOWIEK, 100);
     }
 }

@@ -1,12 +1,13 @@
 [
   {
-    "name": "Analisa",
+    "name": "Blaine",
+    "id": 1,
     "busy": false,
     "activityCycle": [
       "WORK_ON_TASK",
+      "FOOD",
       "PHONE",
       "PHONE",
-      "WORK_ON_TASK",
       "SMOKE"
     ],
     "currentActivityIndex": 0,
@@ -14,28 +15,32 @@
     "initialEnergy": 6
   },
   {
-    "name": "Noella",
+    "name": "Erma",
+    "id": 2,
     "busy": false,
     "activityCycle": [
       "WORK_ON_TASK",
-      "FOOD",
-      "PHONE",
-      "FOOD",
-      "FOOD"
+      "WORK_ON_TASK",
+      "SMOKE",
+      "WORK_ON_TASK",
+      "SMOKE",
+      "PHONE"
     ],
     "currentActivityIndex": 0,
     "energyLeft": 6,
     "initialEnergy": 6
   },
   {
-    "name": "Elayne",
+    "name": "Brittanie",
+    "id": 3,
     "busy": false,
     "activityCycle": [
       "WORK_ON_TASK",
-      "WORK_ON_TASK",
       "FOOD",
       "SMOKE",
-      "FOOD"
+      "SMOKE",
+      "WORK_ON_TASK",
+      "SMOKE"
     ],
     "currentActivityIndex": 0,
     "energyLeft": 6,

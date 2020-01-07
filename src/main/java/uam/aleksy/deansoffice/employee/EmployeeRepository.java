@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -58,5 +59,9 @@ public class EmployeeRepository {
 
     public void addEmployees(Collection<Employee> employeesToAdd) {
         employees.addAll(employeesToAdd);
+    }
+
+    public Optional<Employee> getById(Long id) {
+        return employees.stream().filter(employee -> employee.getId().equals(id)).findFirst();
     }
 }

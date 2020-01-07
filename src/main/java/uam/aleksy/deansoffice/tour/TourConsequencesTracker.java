@@ -4,7 +4,6 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
-import uam.aleksy.deansoffice.employee.EmployeeManager;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceLogger;
@@ -36,14 +35,13 @@ public class TourConsequencesTracker implements NextTourListener {
 
     private ConsequencesFactory consequencesFactory;
 
-    private EmployeeManager employeeManager;
+    private EmployeeRepository employeeRepository;
 
     private OfficeQueue officeQueue;
 
 
     @Autowired
     public TourConsequencesTracker(TourRepository tourRepository,
-                                   EmployeeManager employeeManager,
                                    NextTourPublisher publisher,
                                    EmployeeRepository employeeRepository,
                                    ConsequencesFactory consequencesFactory,
@@ -53,7 +51,7 @@ public class TourConsequencesTracker implements NextTourListener {
         this.publisher = publisher;
         this.consequencesFactory = consequencesFactory;
         this.consequenceRepository = consequenceRepository;
-        this.employeeManager = employeeManager;
+        this.employeeRepository = employeeRepository;
         this.officeQueue = officeQueue;
     }
 
@@ -90,7 +88,7 @@ public class TourConsequencesTracker implements NextTourListener {
 
                 // for DeanConsequences, apply the side effect of firing the employee
                 if (consequence.getClass().equals(DeanConsequences.class)) {
-                    employeeManager.fireEmployeeByApplicant(applicant);
+                    employeeRepository.removeEmployee(employeeRepository.getApplicantsEmployee(applicant));
                 }
 
             }

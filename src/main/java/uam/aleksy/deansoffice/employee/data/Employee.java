@@ -2,8 +2,10 @@ package uam.aleksy.deansoffice.employee.data;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import uam.aleksy.deansoffice.applicant.data.Task;
 import uam.aleksy.deansoffice.employee.enums.Activity;
+import uam.aleksy.deansoffice.employee.enums.EmployeeReputation;
 
 import java.util.List;
 
@@ -13,21 +15,58 @@ import java.util.List;
 
 public class Employee {
 
+    private static final int INITIAL_REPUTATION = 100;
+
     private String name;
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private boolean busy;
     private List<Activity> activityCycle;
     private int currentActivityIndex;
     private int energyLeft;
     private int initialEnergy;
-    public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, int initialEnergy, String name) {
+    private int reputationScore = INITIAL_REPUTATION;
+    private EmployeeReputation reputation = EmployeeReputation.DOBRY_CZLOWIEK;
+
+
+    public Employee(boolean busy, List<Activity> activityCycle, int energyLeft, int initialEnergy, String name, Long id) {
         this.busy = busy;
         this.activityCycle = activityCycle;
         this.energyLeft = energyLeft;
         this.initialEnergy = initialEnergy;
         this.name = name;
+        this.id = id;
     }
 
     public Employee() {
+    }
+
+    @JsonProperty
+    public int getReputationScore() {
+        return reputationScore;
+    }
+
+    @JsonIgnore
+    public void setReputationScore(int reputationScore) {
+        this.reputationScore = reputationScore;
+    }
+
+    @JsonProperty
+    public EmployeeReputation getReputation() {
+        return reputation;
+    }
+
+    @JsonIgnore
+    public void setReputation(EmployeeReputation reputation) {
+        this.reputation = reputation;
     }
 
     public int getInitialEnergy() {
@@ -109,4 +148,9 @@ public class Employee {
     public Activity getCurrentActivity() {
         return activityCycle.get(currentActivityIndex);
     }
+
+    public void decrementReputationScore() {
+        reputationScore -= 1;
+    }
+
 }

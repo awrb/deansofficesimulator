@@ -1,12 +1,13 @@
 package uam.aleksy.deansoffice.utils.dataGeneration;
 
 import com.github.javafaker.Faker;
-import uam.aleksy.deansoffice.employee.enums.Activity;
 import uam.aleksy.deansoffice.employee.data.Employee;
+import uam.aleksy.deansoffice.employee.enums.Activity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.IntStream;
 
 public class RandomEmployeeFactory {
@@ -15,15 +16,18 @@ public class RandomEmployeeFactory {
 
     private static Activity[] activities;
     private static int activitiesSize;
+    private static AtomicLong idGenerator;
 
     static {
         faker = new Faker();
         activities = Activity.values();
         activitiesSize = activities.length;
+        idGenerator = new AtomicLong(0);
     }
 
     public static Employee getRandomEmployee() {
-        return new Employee(false, getRandomActivityCycle(), 6, 6, faker.name().firstName());
+        return new Employee(false, getRandomActivityCycle(), 6, 6,
+                faker.name().firstName(), idGenerator.incrementAndGet());
     }
 
     public static List<Employee> getRandomEmployees(int amount) {
