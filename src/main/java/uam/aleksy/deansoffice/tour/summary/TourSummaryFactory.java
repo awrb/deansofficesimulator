@@ -3,7 +3,9 @@ package uam.aleksy.deansoffice.tour.summary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Task;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
+import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.employee.enums.Activity;
 import uam.aleksy.deansoffice.queue.OfficeQueue;
 import uam.aleksy.deansoffice.tour.data.Tour;
@@ -45,9 +47,18 @@ public class TourSummaryFactory {
         return applicantTypeCounters;
     }
 
+    /**
+     * Calculates expected optimistic waiting time in tours
+     *
+     * @return amount of tours for the simulation to end after the last tour
+     */
     private int calculateExpectedWaitingTime() {
-        // TODO
-        return 0;
+        int totalEnergyRequirement = officeQueue.getQueue().stream()
+                .flatMap(applicant -> applicant.getTasks().stream()).mapToInt(Task::getDifficulty).sum();
+        int totalEmployeeEnergy = employeeRepository
+                .getEmployees(employee -> true).stream().mapToInt(Employee::getInitialEnergy).sum();
+        return totalEnergyRequirement / totalEmployeeEnergy;
+
     }
 
     private Map<String, Activity> createEmployeeNameToActivityMap() {

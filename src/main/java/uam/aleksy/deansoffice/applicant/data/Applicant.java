@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,7 +20,7 @@ import java.util.Optional;
 )
 public abstract class Applicant {
 
-    private List<Task> tasks; // TODO walidacja max 3
+    private List<Task> tasks = new ArrayList<>(); // TODO walidacja max 3
 
     private String name;
 
