@@ -68,7 +68,6 @@ public class OfficeQueue {
         Applicant[] queueAsArray = priorityQueueCopy.toArray(new Applicant[queue.size()]);
         Arrays.sort(queueAsArray, new ApplicantComparator());
 
-        Arrays.stream(queueAsArray).forEach(applicant -> System.out.println(applicant.getClass().getSimpleName()));
         return queueAsArray;
     }
 }
