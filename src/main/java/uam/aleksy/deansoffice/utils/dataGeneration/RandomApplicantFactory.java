@@ -35,6 +35,8 @@ public class RandomApplicantFactory {
 
         if (randomInt <= 65) {
             applicant = new Student();
+            ((Student) applicant).setWithChocolates(random.nextBoolean());
+            ((Student) applicant).setWithFlowers(random.nextBoolean());
         } else if (randomInt <= 72) {
             applicant = new DoctoralStudent();
         } else if (randomInt <= 87) {

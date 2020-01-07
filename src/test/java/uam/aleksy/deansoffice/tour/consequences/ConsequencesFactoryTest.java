@@ -25,16 +25,12 @@ public class ConsequencesFactoryTest {
         Acquaintance acquaintance = new Acquaintance();
 
         // when
-
-        // create consequences twice -> 15 + 15 = 30 minutes to complain
         AcquaintanceConsequences consequences = (AcquaintanceConsequences) consequencesFactory
-                .createConsequence(acquaintance);
-        consequencesFactory
-                .createConsequence(acquaintance);
+                .createConsequence(acquaintance).getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), acquaintance);
-        Assertions.assertEquals(consequences.getMinutesComplained(), 30);
+        Assertions.assertEquals(consequences.getMinutesComplained(), 15);
     }
 
     @Test
@@ -45,13 +41,13 @@ public class ConsequencesFactoryTest {
         student.setRoundsWaited(2);
 
         // when
-        StudentConsequences consequences = (StudentConsequences)
-                consequencesFactory.createConsequence(student);
-        consequencesFactory.createConsequence(student);
+        StudentConsequences consequences = (StudentConsequences) consequencesFactory
+                .createConsequence(student)
+                .getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), student);
-        Assertions.assertEquals(consequences.getBeersToDrink(), 2);
+        Assertions.assertEquals(consequences.getBeersToDrink(), 1);
     }
 
 
@@ -62,13 +58,13 @@ public class ConsequencesFactoryTest {
         Professor professor = new Professor();
 
         // when
-        ProfessorConsequences consequences = (ProfessorConsequences)
-                consequencesFactory.createConsequence(professor);
-        consequencesFactory.createConsequence(professor);
+        ProfessorConsequences consequences = (ProfessorConsequences) consequencesFactory
+                .createConsequence(professor)
+                .getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), professor);
-        Assertions.assertEquals(consequences.getDifferentialDegree(), 2);
+        Assertions.assertEquals(consequences.getDifferentialDegree(), 1);
     }
 
     @Test
@@ -78,13 +74,13 @@ public class ConsequencesFactoryTest {
         Adjunct adjunct = new Adjunct();
 
         // when
-        AdjunctConsequences consequences = (AdjunctConsequences)
-                consequencesFactory.createConsequence(adjunct);
-        consequencesFactory.createConsequence(adjunct);
+        AdjunctConsequences consequences = (AdjunctConsequences) consequencesFactory
+                .createConsequence(adjunct)
+                .getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), adjunct);
-        Assertions.assertEquals(consequences.getExtraTasks(), 2);
+        Assertions.assertEquals(consequences.getExtraTasks(), 1);
     }
 
     @Test
@@ -96,9 +92,9 @@ public class ConsequencesFactoryTest {
         dean.setRoundsWaited(2);
 
         // when
-        DeanConsequences consequences = (DeanConsequences)
-                consequencesFactory.createConsequence(dean);
-
+        DeanConsequences consequences = (DeanConsequences) consequencesFactory
+                .createConsequence(dean)
+                .getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), dean);
@@ -112,8 +108,9 @@ public class ConsequencesFactoryTest {
         DoctoralStudent doctoralStudent = new DoctoralStudent();
 
         // when
-        DoctoralStudentConsequences consequences = (DoctoralStudentConsequences)
-                consequencesFactory.createConsequence(doctoralStudent);
+        DoctoralStudentConsequences consequences = (DoctoralStudentConsequences) consequencesFactory
+                .createConsequence(doctoralStudent)
+                .getConsequence();
 
         // then
         Assertions.assertEquals(consequences.getApplicant(), doctoralStudent);

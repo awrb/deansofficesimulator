@@ -1,24 +1,12 @@
 [
   {
-    "@type": "Acquaintance",
+    "@type": "Professor",
     "tasks": [
       {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      },
-      {
         "difficulty": 2
-      },
-      {
-        "difficulty": 1
       }
     ],
-    "name": "Efren",
+    "name": "Max",
     "id": 1,
     "roundsWaited": 0
   },
@@ -26,41 +14,41 @@
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 4
+        "difficulty": 5
       },
       {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
+        "difficulty": 3
       },
       {
         "difficulty": 1
       }
     ],
-    "name": "Chun",
+    "name": "Tyrone",
     "id": 2,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": false
   },
   {
     "@type": "Professor",
     "tasks": [
       {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
         "difficulty": 0
       },
       {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 4
-      },
-      {
         "difficulty": 1
+      },
+      {
+        "difficulty": 0
       }
     ],
-    "name": "Riley",
+    "name": "Jaymie",
     "id": 3,
     "roundsWaited": 0
   },
@@ -68,453 +56,137 @@
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 3
-      }
-    ],
-    "name": "Lang",
-    "id": 4,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
+        "difficulty": 5
+      },
       {
         "difficulty": 4
       },
       {
-        "difficulty": 1
-      },
-      {
         "difficulty": 2
+      }
+    ],
+    "name": "Pete",
+    "id": 4,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Dean",
+    "tasks": [
+      {
+        "difficulty": 3
       },
       {
         "difficulty": 5
       },
       {
-        "difficulty": 0
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
       }
     ],
-    "name": "Karyl",
+    "name": "Geraldo",
     "id": 5,
     "roundsWaited": 0
   },
   {
-    "@type": "Student",
+    "@type": "Adjunct",
     "tasks": [
       {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 4
+        "difficulty": 5
       }
     ],
-    "name": "Arica",
+    "name": "Jennefer",
     "id": 6,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "roundsWaited": 0
   },
   {
     "@type": "Acquaintance",
     "tasks": [
       {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 4
-      },
-      {
         "difficulty": 0
       },
       {
-        "difficulty": 5
+        "difficulty": 3
       },
       {
-        "difficulty": 5
+        "difficulty": 3
       }
     ],
-    "name": "Nick",
+    "name": "Reggie",
     "id": 7,
     "roundsWaited": 0
   },
   {
-    "@type": "Student",
+    "@type": "Dean",
     "tasks": [
       {
-        "difficulty": 3
-      },
-      {
         "difficulty": 0
-      },
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 3
       }
     ],
-    "name": "Doria",
+    "name": "Cris",
     "id": 8,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "roundsWaited": 0
   },
   {
-    "@type": "Student",
+    "@type": "Acquaintance",
     "tasks": [
       {
-        "difficulty": 0
+        "difficulty": 3
       },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Luci",
-    "id": 9,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
       {
         "difficulty": 1
       },
       {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 4
+        "difficulty": 5
       }
     ],
-    "name": "Theola",
+    "name": "Marica",
+    "id": 9,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Gregory",
     "id": 10,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
-    "@type": "DoctoralStudent",
+    "@type": "Student",
     "tasks": [
       {
-        "difficulty": 2
+        "difficulty": 4
       },
       {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 1
+        "difficulty": 5
       },
       {
         "difficulty": 0
       },
       {
-        "difficulty": 2
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
       }
     ],
-    "name": "Ashli",
+    "name": "Kermit",
     "id": 11,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Yadira",
-    "id": 12,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Connie",
-    "id": 13,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Aurelia",
-    "id": 14,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Valery",
-    "id": 15,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Domonique",
-    "id": 16,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Ignacio",
-    "id": 17,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Liz",
-    "id": 18,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Samira",
-    "id": 19,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "DoctoralStudent",
-    "tasks": [
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Monroe",
-    "id": 20,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Delbert",
-    "id": 21,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Loriann",
-    "id": 22,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Scottie",
-    "id": 23,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Jeremy",
-    "id": 24,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Kathie",
-    "id": 25,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": false,
+    "withChocolates": false
   },
   {
     "@type": "Acquaintance",
@@ -523,108 +195,25 @@
         "difficulty": 1
       },
       {
-        "difficulty": 3
-      },
-      {
         "difficulty": 1
       },
       {
-        "difficulty": 4
+        "difficulty": 0
       }
     ],
-    "name": "Alise",
-    "id": 26,
+    "name": "Mathew",
+    "id": 12,
     "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Darin",
-    "id": 27,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Dennis",
-    "id": 28,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Mario",
-    "id": 29,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Loyd",
-    "id": 30,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Elijah",
-    "id": 31,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
   },
   {
     "@type": "Professor",
     "tasks": [
       {
         "difficulty": 4
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 1
       }
     ],
-    "name": "Sal",
-    "id": 32,
+    "name": "Broderick",
+    "id": 13,
     "roundsWaited": 0
   },
   {
@@ -634,30 +223,56 @@
         "difficulty": 5
       }
     ],
-    "name": "Stacey",
-    "id": 33,
+    "name": "Alesha",
+    "id": 14,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 4
+        "difficulty": 5
+      }
+    ],
+    "name": "Clifford",
+    "id": 15,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
       },
       {
         "difficulty": 2
-      },
-      {
-        "difficulty": 1
       }
     ],
-    "name": "Dorian",
-    "id": 34,
+    "name": "Jefferson",
+    "id": 16,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Jarrett",
+    "id": 17,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
     "@type": "Student",
@@ -666,14 +281,113 @@
         "difficulty": 0
       },
       {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Estelle",
+    "id": 18,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
         "difficulty": 3
       }
     ],
-    "name": "Ali",
-    "id": 35,
+    "name": "Stanton",
+    "id": 19,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Athena",
+    "id": 20,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Carson",
+    "id": 21,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Adrianna",
+    "id": 22,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Simonne",
+    "id": 23,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "Acquaintance",
@@ -682,20 +396,17 @@
         "difficulty": 5
       },
       {
-        "difficulty": 3
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
       },
       {
         "difficulty": 0
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
       }
     ],
-    "name": "Tilda",
-    "id": 36,
+    "name": "Alonzo",
+    "id": 24,
     "roundsWaited": 0
   },
   {
@@ -705,23 +416,180 @@
         "difficulty": 4
       },
       {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 5
+      },
+      {
         "difficulty": 1
+      }
+    ],
+    "name": "Mallory",
+    "id": 25,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Tristan",
+    "id": 26,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Shawanna",
+    "id": 27,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
       },
       {
         "difficulty": 1
       },
       {
         "difficulty": 5
+      }
+    ],
+    "name": "Marcelene",
+    "id": 28,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Ken",
+    "id": 29,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Donetta",
+    "id": 30,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
       },
       {
         "difficulty": 4
       }
     ],
-    "name": "Tran",
-    "id": 37,
+    "name": "Lynsey",
+    "id": 31,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Antone",
+    "id": 32,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Cameron",
+    "id": 33,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "Student",
@@ -733,17 +601,93 @@
         "difficulty": 3
       },
       {
+        "difficulty": 5
+      }
+    ],
+    "name": "Andrew",
+    "id": 34,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
         "difficulty": 1
+      }
+    ],
+    "name": "Nigel",
+    "id": 35,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Guillermo",
+    "id": 36,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
       },
       {
         "difficulty": 3
       }
     ],
-    "name": "Jackie",
+    "name": "Shanelle",
+    "id": 37,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Leonardo",
     "id": 38,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "DoctoralStudent",
@@ -753,9 +697,12 @@
       },
       {
         "difficulty": 4
+      },
+      {
+        "difficulty": 4
       }
     ],
-    "name": "Marion",
+    "name": "Patrick",
     "id": 39,
     "roundsWaited": 0
   },
@@ -766,292 +713,282 @@
         "difficulty": 4
       },
       {
-        "difficulty": 5
+        "difficulty": 0
       },
       {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 1
+        "difficulty": 0
       }
     ],
-    "name": "Jeremiah",
+    "name": "Junior",
     "id": 40,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
-    "@type": "Student",
+    "@type": "Acquaintance",
     "tasks": [
       {
+        "difficulty": 0
+      },
+      {
         "difficulty": 4
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 2
       }
     ],
-    "name": "Leslie",
+    "name": "Tu",
     "id": 41,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 5
-      }
-    ],
-    "name": "Eddie",
-    "id": 42,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 5
-      }
-    ],
-    "name": "Tobi",
-    "id": 43,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Andrea",
-    "id": 44,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Mary",
-    "id": 45,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Ryan",
-    "id": 46,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Bennett",
-    "id": 47,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "roundsWaited": 0
   },
   {
     "@type": "Professor",
     "tasks": [
       {
-        "difficulty": 4
-      }
-    ],
-    "name": "Ivey",
-    "id": 48,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
-      },
-      {
         "difficulty": 2
       }
     ],
-    "name": "Malcom",
-    "id": 49,
+    "name": "Kamilah",
+    "id": 42,
     "roundsWaited": 0
   },
   {
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 5
-      },
-      {
         "difficulty": 2
-      },
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 1
       }
     ],
-    "name": "Myron",
-    "id": 50,
+    "name": "Matilda",
+    "id": 43,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 5
-      }
-    ],
-    "name": "Damien",
-    "id": 51,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Fabian",
-    "id": 52,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Mason",
-    "id": 53,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Kendrick",
-    "id": 54,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Gerard",
-    "id": 55,
-    "roundsWaited": 0
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "DoctoralStudent",
     "tasks": [
       {
+        "difficulty": 2
+      }
+    ],
+    "name": "Darryl",
+    "id": 44,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Jimmy",
+    "id": 45,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Odell",
+    "id": 46,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Dean",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Anna",
+    "id": 47,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
+      },
+      {
         "difficulty": 1
       }
     ],
-    "name": "Christin",
+    "name": "Nan",
+    "id": 48,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Cornell",
+    "id": 49,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Lilla",
+    "id": 50,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Ezequiel",
+    "id": 51,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Sachiko",
+    "id": 52,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Tuan",
+    "id": 53,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Coralee",
+    "id": 54,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Geoffrey",
+    "id": 55,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Hunter",
     "id": 56,
     "roundsWaited": 0
   },
@@ -1065,68 +1002,20 @@
         "difficulty": 2
       },
       {
-        "difficulty": 0
+        "difficulty": 2
+      },
+      {
+        "difficulty": 5
       }
     ],
-    "name": "Cristal",
+    "name": "Raleigh",
     "id": 57,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": false
   },
   {
     "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Soila",
-    "id": 58,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Katina",
-    "id": 59,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Tayna",
-    "id": 60,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "DoctoralStudent",
     "tasks": [
       {
         "difficulty": 0
@@ -1135,71 +1024,104 @@
         "difficulty": 5
       }
     ],
-    "name": "Mariann",
-    "id": 61,
+    "name": "Rima",
+    "id": 58,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Juana",
+    "id": 59,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Adjunct",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Corey",
+    "id": 60,
     "roundsWaited": 0
   },
   {
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 0
-      },
-      {
         "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 5
       }
     ],
-    "name": "Thomas",
-    "id": 62,
+    "name": "Gala",
+    "id": 61,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
     "@type": "Adjunct",
     "tasks": [
       {
         "difficulty": 5
-      },
-      {
-        "difficulty": 2
       }
     ],
-    "name": "Laveta",
-    "id": 63,
+    "name": "Delsie",
+    "id": 62,
     "roundsWaited": 0
   },
   {
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 4
+        "difficulty": 2
       }
     ],
-    "name": "Kim",
-    "id": 64,
+    "name": "Shelia",
+    "id": 63,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
     "@type": "Student",
     "tasks": [
-      {
-        "difficulty": 2
-      },
       {
         "difficulty": 3
       },
@@ -1210,29 +1132,40 @@
         "difficulty": 1
       }
     ],
-    "name": "Sina",
-    "id": 65,
+    "name": "Erik",
+    "id": 64,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
     "@type": "DoctoralStudent",
     "tasks": [
       {
-        "difficulty": 0
+        "difficulty": 4
       },
       {
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "difficulty": 3
-      },
-      {
-        "difficulty": 2
       }
     ],
-    "name": "Noble",
+    "name": "Roseanne",
+    "id": 65,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      }
+    ],
+    "name": "Dwight",
     "id": 66,
     "roundsWaited": 0
   },
@@ -1240,43 +1173,88 @@
     "@type": "Student",
     "tasks": [
       {
-        "difficulty": 2
-      }
-    ],
-    "name": "Lyman",
-    "id": 67,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
         "difficulty": 5
       },
       {
-        "difficulty": 4
+        "difficulty": 3
       }
     ],
-    "name": "Luna",
+    "name": "Cary",
+    "id": 67,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Reba",
     "id": 68,
     "roundsWaited": 0
   },
   {
-    "@type": "DoctoralStudent",
+    "@type": "Student",
     "tasks": [
       {
+        "difficulty": 0
+      },
+      {
         "difficulty": 2
+      },
+      {
+        "difficulty": 3
       }
     ],
-    "name": "Thomasena",
+    "name": "Angel",
     "id": 69,
-    "roundsWaited": 0
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
   },
   {
     "@type": "Student",
     "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Britany",
+    "id": 70,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
       {
         "difficulty": 5
       },
@@ -1284,108 +1262,50 @@
         "difficulty": 2
       },
       {
-        "difficulty": 0
-      }
-    ],
-    "name": "Timothy",
-    "id": 70,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Sergio",
-    "id": 71,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "DoctoralStudent",
-    "tasks": [
+        "difficulty": 2
+      },
       {
         "difficulty": 2
       }
     ],
-    "name": "Xochitl",
+    "name": "Delbert",
+    "id": 71,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Professor",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
+      }
+    ],
+    "name": "Tyron",
     "id": 72,
     "roundsWaited": 0
   },
   {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Bryanna",
-    "id": 73,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Katharyn",
-    "id": 74,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
+    "@type": "Acquaintance",
     "tasks": [
       {
         "difficulty": 2
       },
       {
-        "difficulty": 1
-      }
-    ],
-    "name": "Aracely",
-    "id": 75,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
         "difficulty": 5
       },
       {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
-      },
-      {
         "difficulty": 1
+      },
+      {
+        "difficulty": 2
       }
     ],
-    "name": "Kirby",
-    "id": 76,
+    "name": "Trinidad",
+    "id": 73,
     "roundsWaited": 0
   },
   {
@@ -1395,42 +1315,7 @@
         "difficulty": 1
       },
       {
-        "difficulty": 4
-      },
-      {
         "difficulty": 3
-      },
-      {
-        "difficulty": 3
-      }
-    ],
-    "name": "Mike",
-    "id": 77,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Martin",
-    "id": 78,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
       },
       {
         "difficulty": 5
@@ -1439,14 +1324,119 @@
         "difficulty": 1
       },
       {
-        "difficulty": 3
+        "difficulty": 5
       }
     ],
-    "name": "Michelina",
-    "id": 79,
+    "name": "Luke",
+    "id": 74,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Gustavo",
+    "id": 75,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Bertha",
+    "id": 76,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Roger",
+    "id": 77,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Corey",
+    "id": 78,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Zachariah",
+    "id": 79,
+    "roundsWaited": 0
   },
   {
     "@type": "Acquaintance",
@@ -1458,103 +1448,114 @@
         "difficulty": 2
       },
       {
-        "difficulty": 4
+        "difficulty": 2
       }
     ],
-    "name": "Elana",
+    "name": "Golden",
     "id": 80,
     "roundsWaited": 0
   },
   {
-    "@type": "Acquaintance",
+    "@type": "Student",
     "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 0
-      },
       {
         "difficulty": 4
       },
       {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 3
+        "difficulty": 4
       }
     ],
-    "name": "Kelvin",
+    "name": "Carlton",
     "id": 81,
-    "roundsWaited": 0
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
   },
   {
     "@type": "Student",
     "tasks": [
+      {
+        "difficulty": 3
+      },
       {
         "difficulty": 5
-      }
-    ],
-    "name": "Monte",
-    "id": 82,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Adjunct",
-    "tasks": [
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Cordie",
-    "id": 83,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
+      },
       {
         "difficulty": 2
       },
       {
-        "difficulty": 3
-      }
-    ],
-    "name": "Aaron",
-    "id": 84,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Isreal",
-    "id": 85,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 1
+        "difficulty": 0
       },
       {
         "difficulty": 0
       }
     ],
-    "name": "Leland",
+    "name": "India",
+    "id": 82,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Wally",
+    "id": 83,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Ester",
+    "id": 84,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Sherwood",
+    "id": 85,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Acquaintance",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 4
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Trula",
     "id": 86,
     "roundsWaited": 0
   },
@@ -1562,18 +1563,33 @@
     "@type": "Student",
     "tasks": [
       {
+        "difficulty": 1
+      },
+      {
         "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
       }
     ],
-    "name": "Rhonda",
+    "name": "Ariana",
     "id": 87,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": true,
+    "withChocolates": true
   },
   {
     "@type": "Student",
     "tasks": [
+      {
+        "difficulty": 0
+      },
       {
         "difficulty": 0
       },
@@ -1584,199 +1600,227 @@
         "difficulty": 5
       },
       {
-        "difficulty": 3
+        "difficulty": 5
       }
     ],
-    "name": "Vaughn",
+    "name": "Sidney",
     "id": 88,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "withFlowers": false,
+    "withChocolates": true
   },
   {
-    "@type": "Student",
+    "@type": "DoctoralStudent",
     "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 2
+      },
       {
         "difficulty": 0
       },
       {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 2
+        "difficulty": 1
       }
     ],
-    "name": "Mica",
+    "name": "August",
     "id": 89,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "roundsWaited": 0
   },
   {
-    "@type": "Student",
+    "@type": "Acquaintance",
     "tasks": [
       {
-        "difficulty": 2
-      },
-      {
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "difficulty": 5
       }
     ],
-    "name": "Eugene",
+    "name": "Winnifred",
     "id": 90,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
+    "roundsWaited": 0
   },
   {
-    "@type": "DoctoralStudent",
+    "@type": "Student",
     "tasks": [
       {
-        "difficulty": 4
+        "difficulty": 1
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 5
       }
     ],
-    "name": "Alec",
+    "name": "Blair",
     "id": 91,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Juan",
-    "id": 92,
     "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 0
-      },
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Misti",
-    "id": 93,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 1
-      }
-    ],
-    "name": "Logan",
-    "id": 94,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Jung",
-    "id": 95,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 0
-      }
-    ],
-    "name": "Fermin",
-    "id": 96,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Acquaintance",
-    "tasks": [
-      {
-        "difficulty": 3
-      },
-      {
-        "difficulty": 4
-      }
-    ],
-    "name": "Lannie",
-    "id": 97,
-    "roundsWaited": 0
-  },
-  {
-    "@type": "Student",
-    "tasks": [
-      {
-        "difficulty": 2
-      }
-    ],
-    "name": "Harland",
-    "id": 98,
-    "roundsWaited": 0,
-    "bringsFlowers": false,
-    "bringsChocolates": false
-  },
-  {
-    "@type": "DoctoralStudent",
-    "tasks": [
-      {
-        "difficulty": 5
-      },
-      {
-        "difficulty": 4
-      },
-      {
-        "difficulty": 1
-      },
-      {
-        "difficulty": 5
-      }
-    ],
-    "name": "Arnoldo",
-    "id": 99,
-    "roundsWaited": 0
+    "withFlowers": true,
+    "withChocolates": false
   },
   {
     "@type": "Adjunct",
     "tasks": [
       {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Jackson",
+    "id": 92,
+    "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Cassondra",
+    "id": 93,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 3
+      },
+      {
         "difficulty": 5
       }
     ],
-    "name": "Brittaney",
-    "id": 100,
+    "name": "Esmeralda",
+    "id": 94,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "DoctoralStudent",
+    "tasks": [
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Billie",
+    "id": 95,
     "roundsWaited": 0
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 0
+      }
+    ],
+    "name": "Deena",
+    "id": 96,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 1
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Royal",
+    "id": 97,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": true
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 5
+      },
+      {
+        "difficulty": 3
+      },
+      {
+        "difficulty": 4
+      }
+    ],
+    "name": "Lourdes",
+    "id": 98,
+    "roundsWaited": 0,
+    "withFlowers": false,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 2
+      },
+      {
+        "difficulty": 2
+      }
+    ],
+    "name": "Wava",
+    "id": 99,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
+  },
+  {
+    "@type": "Student",
+    "tasks": [
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 0
+      },
+      {
+        "difficulty": 3
+      }
+    ],
+    "name": "Illa",
+    "id": 100,
+    "roundsWaited": 0,
+    "withFlowers": true,
+    "withChocolates": false
   }
 ]

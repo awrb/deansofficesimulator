@@ -4,44 +4,57 @@ import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.employee.EmployeeManager;
 import uam.aleksy.deansoffice.employee.EmployeeRepository;
+import uam.aleksy.deansoffice.queue.OfficeQueue;
 import uam.aleksy.deansoffice.tour.consequences.ConsequenceLogger;
+import uam.aleksy.deansoffice.tour.consequences.ConsequenceRepository;
 import uam.aleksy.deansoffice.tour.consequences.ConsequencesFactory;
 import uam.aleksy.deansoffice.tour.consequences.data.Consequence;
+import uam.aleksy.deansoffice.tour.consequences.data.ConsequenceCreatedPair;
+import uam.aleksy.deansoffice.tour.consequences.data.DeanConsequences;
 import uam.aleksy.deansoffice.tour.data.Tour;
-import uam.aleksy.deansoffice.utils.randomDataAccess.RandomDataAccessService;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+
+/**
+ * Tracks consequences for all applicants in the queue after every tour
+ */
 @Component
 @Log
 public class TourConsequencesTracker implements NextTourListener {
 
     private TourRepository tourRepository;
 
-    private RandomDataAccessService randomDataAccessService;
-
     private NextTourPublisher publisher;
 
-    private EmployeeRepository employeeRepository;
+    private ConsequenceRepository consequenceRepository;
 
     private ConsequencesFactory consequencesFactory;
+
+    private EmployeeManager employeeManager;
+
+    private OfficeQueue officeQueue;
 
 
     @Autowired
     public TourConsequencesTracker(TourRepository tourRepository,
-                                   RandomDataAccessService randomDataAccessService,
+                                   EmployeeManager employeeManager,
                                    NextTourPublisher publisher,
                                    EmployeeRepository employeeRepository,
-                                   ConsequencesFactory consequencesFactory) {
+                                   ConsequencesFactory consequencesFactory,
+                                   ConsequenceRepository consequenceRepository,
+                                   OfficeQueue officeQueue) {
         this.tourRepository = tourRepository;
-        this.randomDataAccessService = randomDataAccessService;
         this.publisher = publisher;
-        this.employeeRepository = employeeRepository;
         this.consequencesFactory = consequencesFactory;
+        this.consequenceRepository = consequenceRepository;
+        this.employeeManager = employeeManager;
+        this.officeQueue = officeQueue;
     }
 
 
@@ -55,16 +68,31 @@ public class TourConsequencesTracker implements NextTourListener {
     public void nextTour(Tour tour) {
         List<Consequence> consequencesOfTour = new ArrayList<>();
 
+        // increment rounds waited for everyone in the queue
+        officeQueue.getQueue().forEach(Applicant::incrementRoundsWaited);
+
         Set<Applicant> applicants = tourRepository.getLastTourApplicants();
 
         applicants.forEach(applicant -> {
+            ConsequenceCreatedPair consequenceCreatedPair = consequencesFactory.createConsequence(applicant);
             applicant.incrementRoundsWaited();
-            Consequence consequence = consequencesFactory.createConsequence(applicant);
 
-            // due to circumstances, consequence was null...
-            if (consequence != null) {
+            // due to probabilistic circumstances, consequence was null
+            if (consequenceCreatedPair != null) {
+                Consequence consequence = consequenceCreatedPair.getConsequence();
                 consequencesOfTour.add(consequence);
                 ConsequenceLogger.reportConsequence(consequence);
+
+                // if the consequence was created, add it to the repository
+                if (consequenceCreatedPair.isCreated()) {
+                    consequenceRepository.addConsequenceForApplicant(applicant, consequence);
+                }
+
+                // for DeanConsequences, apply the side effect of firing the employee
+                if (consequence.getClass().equals(DeanConsequences.class)) {
+                    employeeManager.fireEmployeeByApplicant(applicant);
+                }
+
             }
         });
 

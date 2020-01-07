@@ -4,26 +4,26 @@ public class Student extends Applicant {
 
     // the lowest priority
     private static final int PRIORITY = 1;
-    private boolean bringsFlowers;
-    private boolean bringsChocolates;
+    private boolean withFlowers;
+    private boolean withChocolates;
 
     public Student() {
     }
 
-    public boolean isBringsFlowers() {
-        return bringsFlowers;
+    public boolean isWithFlowers() {
+        return withFlowers;
     }
 
-    public void setBringsFlowers(boolean bringsFlowers) {
-        this.bringsFlowers = bringsFlowers;
+    public void setWithFlowers(boolean withFlowers) {
+        this.withFlowers = withFlowers;
     }
 
-    public boolean isBringsChocolates() {
-        return bringsChocolates;
+    public boolean isWithChocolates() {
+        return withChocolates;
     }
 
-    public void setBringsChocolates(boolean bringsChocolates) {
-        this.bringsChocolates = bringsChocolates;
+    public void setWithChocolates(boolean withChocolates) {
+        this.withChocolates = withChocolates;
     }
 
     public int getPriority() {

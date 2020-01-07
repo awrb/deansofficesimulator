@@ -39,11 +39,11 @@ public class ApplicantComparator implements Comparator<Applicant> {
         }
 
         if (applicantClazz.equals(DoctoralStudent.class) || applicantClazz.equals(Acquaintance.class)) {
-            return student.isBringsChocolates() ? -1 : 1;
+            return student.isWithChocolates() ? -1 : 1;
         }
 
         if (applicantClazz.equals(Adjunct.class)) {
-            return student.isBringsChocolates() && student.isBringsFlowers() ? -1 : 1;
+            return student.isWithChocolates() && student.isWithFlowers() ? -1 : 1;
         }
 
         return 1;

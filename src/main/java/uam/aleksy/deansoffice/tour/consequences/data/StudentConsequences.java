@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Student;
 
 public class StudentConsequences extends Consequence {
 
@@ -10,8 +10,9 @@ public class StudentConsequences extends Consequence {
     public StudentConsequences() {
         super();
     }
-    public StudentConsequences(Applicant applicant) {
-        super(applicant);
+
+    public StudentConsequences(Student student) {
+        super(student);
     }
 
     public int getBeersToDrink() {
@@ -32,5 +33,9 @@ public class StudentConsequences extends Consequence {
 
     public void incrementBeersToDrink() {
         beersToDrink += 1;
+    }
+
+    public void incrementMarkPunishment() {
+        markPunishment += 0.5f;
     }
 }

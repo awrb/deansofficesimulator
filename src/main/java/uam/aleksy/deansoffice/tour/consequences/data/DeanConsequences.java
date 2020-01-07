@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Dean;
 import uam.aleksy.deansoffice.employee.data.Employee;
 
 import java.util.ArrayList;
@@ -15,8 +15,8 @@ public class DeanConsequences extends Consequence {
         firedEmployees = new ArrayList<>();
     }
 
-    public DeanConsequences(Applicant applicant, List<Employee> firedEmployees) {
-        super(applicant);
+    public DeanConsequences(Dean dean, List<Employee> firedEmployees) {
+        super(dean);
         this.firedEmployees = firedEmployees;
     }
 

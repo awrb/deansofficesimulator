@@ -1,18 +1,18 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Professor;
 
 public class ProfessorConsequences extends Consequence {
 
-    public ProfessorConsequences(Applicant applicant) {
-        super(applicant);
+    private int differentialDegree;
+
+    public ProfessorConsequences(Professor professor) {
+        super(professor);
     }
 
     public ProfessorConsequences() {
         super();
     }
-
-    private int differentialDegree;
 
     public int getDifferentialDegree() {
         return differentialDegree;

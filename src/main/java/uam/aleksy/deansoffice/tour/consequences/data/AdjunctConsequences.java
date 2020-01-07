@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Adjunct;
 
 public class AdjunctConsequences extends Consequence {
 
@@ -10,8 +10,8 @@ public class AdjunctConsequences extends Consequence {
         super();
     }
 
-    public AdjunctConsequences(Applicant applicant) {
-        super(applicant);
+    public AdjunctConsequences(Adjunct adjunct) {
+        super(adjunct);
     }
 
     public AdjunctConsequences(int extraTasks) {

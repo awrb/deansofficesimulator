@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.DoctoralStudent;
 import uam.aleksy.deansoffice.applicant.data.Student;
 
 import java.util.ArrayList;
@@ -15,8 +15,8 @@ public class DoctoralStudentConsequences extends Consequence {
         punishedStudents = new ArrayList<>();
     }
 
-    public DoctoralStudentConsequences(Applicant applicant, List<Student> punishedStudents) {
-        super(applicant);
+    public DoctoralStudentConsequences(DoctoralStudent doctoralStudent, List<Student> punishedStudents) {
+        super(doctoralStudent);
         this.punishedStudents = punishedStudents;
     }
 

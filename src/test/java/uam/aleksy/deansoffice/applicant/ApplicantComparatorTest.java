@@ -43,7 +43,7 @@ public class ApplicantComparatorTest {
         ApplicantComparator applicantComparator = new ApplicantComparator();
         Student student = new Student();
 
-        student.setBringsChocolates(true);
+        student.setWithChocolates(true);
 
         DoctoralStudent doctoralStudent = new DoctoralStudent();
         Acquaintance acquaintance = new Acquaintance();
@@ -63,8 +63,8 @@ public class ApplicantComparatorTest {
         ApplicantComparator applicantComparator = new ApplicantComparator();
         Student student = new Student();
 
-        student.setBringsChocolates(true);
-        student.setBringsFlowers(true);
+        student.setWithChocolates(true);
+        student.setWithFlowers(true);
 
         Adjunct adjunct = new Adjunct();
 

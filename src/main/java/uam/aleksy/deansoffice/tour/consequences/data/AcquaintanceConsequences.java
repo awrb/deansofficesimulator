@@ -1,6 +1,6 @@
 package uam.aleksy.deansoffice.tour.consequences.data;
 
-import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.applicant.data.Acquaintance;
 
 public class AcquaintanceConsequences extends Consequence {
 
@@ -10,8 +10,8 @@ public class AcquaintanceConsequences extends Consequence {
         super();
     }
 
-    public AcquaintanceConsequences(Applicant applicant) {
-        super(applicant);
+    public AcquaintanceConsequences(Acquaintance acquaintance) {
+        super(acquaintance);
     }
 
     public void incrementMinutesComplained() {
