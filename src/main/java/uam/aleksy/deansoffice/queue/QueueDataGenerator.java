@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.employee.data.Employee;
+import uam.aleksy.deansoffice.utils.Constants;
 import uam.aleksy.deansoffice.utils.dataGeneration.RandomApplicantFactory;
 import uam.aleksy.deansoffice.utils.dataGeneration.RandomEmployeeFactory;
 
@@ -31,7 +32,7 @@ public class QueueDataGenerator {
         this.numOfApplicants = numOfApplicants;
         this.numOfEmployees = numOfEmployees;
         this.randomApplicantFactory = randomApplicantFactory;
-        idGenerator = new AtomicLong(0);
+        idGenerator = new AtomicLong(Constants.FIRST_ID);
     }
 
 

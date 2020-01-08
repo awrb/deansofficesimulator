@@ -3,6 +3,7 @@ package uam.aleksy.deansoffice.utils.dataGeneration;
 import com.github.javafaker.Faker;
 import uam.aleksy.deansoffice.employee.data.Employee;
 import uam.aleksy.deansoffice.employee.enums.Activity;
+import uam.aleksy.deansoffice.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class RandomEmployeeFactory {
         faker = new Faker();
         activities = Activity.values();
         activitiesSize = activities.length;
-        idGenerator = new AtomicLong(0);
+        idGenerator = new AtomicLong(Constants.FIRST_ID);
     }
 
     public static Employee getRandomEmployee() {

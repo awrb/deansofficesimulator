@@ -4,6 +4,7 @@ import lombok.extern.java.Log;
 import org.springframework.stereotype.Repository;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
 import uam.aleksy.deansoffice.tour.data.Tour;
+import uam.aleksy.deansoffice.utils.Constants;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
@@ -15,7 +16,6 @@ import java.util.concurrent.atomic.AtomicLong;
 @Repository
 public class TourRepository {
 
-    private static final Long FIRST_ID = 0L;
 
     private AtomicLong tourIdGenerator;
 
@@ -27,7 +27,7 @@ public class TourRepository {
 
     @PostConstruct
     private void init() {
-        tourIdGenerator = new AtomicLong(FIRST_ID);
+        tourIdGenerator = new AtomicLong(Constants.FIRST_ID);
         tourApplicantsMap = new HashMap<>();
     }
 

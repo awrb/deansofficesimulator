@@ -3,6 +3,7 @@ package uam.aleksy.deansoffice.applicant;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 import uam.aleksy.deansoffice.applicant.data.Applicant;
+import uam.aleksy.deansoffice.utils.Constants;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class ApplicantRepository {
     @PostConstruct
     private void init() {
         applicants = new ArrayList<>();
-        idGenerator = new AtomicLong(0);
+        idGenerator = new AtomicLong(Constants.FIRST_ID);
     }
 
     public void add(Collection<Applicant> applicantsCollection) {
